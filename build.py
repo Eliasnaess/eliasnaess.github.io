@@ -208,7 +208,7 @@ def publish_seminar_media(s, dest):
     out = {"audio": [], "video": [], "images": [], "pdfs": []}
     for f in s["audio"]:
         src = os.path.join(s["dir"], f); base = os.path.splitext(f)[0]
-        if os.path.getsize(src) > 12_000_000 or not f.lower().endswith(".mp3"):
+        if not f.lower().endswith(".mp3"):
             dst = os.path.join(dest, base + ".mp3")
             subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", src, "-ac", "1", "-b:a", "64k", dst], check=True)
             out["audio"].append(base + ".mp3")
