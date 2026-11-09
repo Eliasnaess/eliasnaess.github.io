@@ -1,0 +1,12 @@
+# Edit freely — the build reads this file.
+name: Elias Andreas Næss
+tagline: Political theory, Norway in the world, and the philosophy of mind.
+base_url: "https://eliasnaess.github.io"
+bio: >-
+  I study political theory and philosophy at Leiden University (MSc Political Science; MPhil Philosophy of Law,
+  Governance and Politics). Before that I worked at Norway's Permanent Mission to the UN in New York and with
+  UNDP in Nepal. I also co-run Elida Studio, a Scandinavian creative studio.
+question: What justifies the power that institutions exercise over people's lives?
+links:
+  - {label: LinkedIn, url: ""}      # add your LinkedIn URL
+  - {label: Elida Studio, url: "https://helloelida.com"}

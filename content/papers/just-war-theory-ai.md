@@ -1,0 +1,75 @@
+---
+title: Just War Theory in the Era of Artificial Intelligence
+subtitle: ''
+course: pp-contemporary-debates
+date: '2026-01-09'
+strand: legitimacy
+featured: false
+summary: Many violations of the laws of war stem from the fog of war itself. AI decision-support
+  systems could make distinction, proportionality and precaution more achievable —
+  provided meaningful human judgment is preserved.
+words: 1993
+---
+Despite the familiar saying that “all is fair in love and war,” the conduct of war is, at least according to Just War Theory (JWT), subject to well-established moral constraints. These constraints aim, above all, to limit the suffering and harm associated with armed conflict. On the standard account provided by Helen Frowe, JWT is divided into three domains: *jus ad bellum* (justice before war), *jus in bello* (justice during war) and *jus post bellum* (justice after war) (Frowe 2016, 5). This paper’s focus lies within *jus in bello,* particularly the principles of distinction, proportionality, and precaution in attack.
+
+These principles are not abstract moral aspirations. In fact, they enjoy an unprecedented degree of institutional recognition through legal codification in the Hague Conventions of 1899 and 1907, as well as the Geneva Conventions of 1949 and the 1977 Additional Protocols (Frowe 2006, 105). The Additional Protocols are ratified by over 160 States, which, according to the legal philosopher Bryan Hance, “places them among the most widely accepted legal instruments in the world.” (Hance 2025, 155) Yet despite widespread endorsement by states, compliance with JWT remains a persistent challenge. Excessive civilian casualties, disproportionate uses of force and war crimes continue to occur even in wars fought by states committed to the principles of JWT.
+
+In this paper, I argue that a central reason for the failure of adherence to JWT lies not only in moral indifference, but in the “serious difficulties of perception and information” of warfare itself (Walzer 2006, 12). As Michael Walzer points out in *Just and Unjust Wars*, “war is a world of moral risk”, in which agents must act without full knowledge and bear responsibility for outcomes they cannot fully control. The limitations of human cognition in war leads to unnecessary civilian deaths which could be prevented with access to better information.
+
+With the emergence of technology such as Artificial Intelligence Decision Support Systems (AI DSS), the epistemic conditions of the battlefield are transforming. If AI DSS can improve the epistemic conditions of war, it may have moral implications on their use within JWT. My thesis is therefore the following. If AI DSS make compliance with core JWT principles feasible, then states committed to JWT have a moral obligation to adopt them.
+
+The paper proceeds as follows. First, I show that there is an epistemic gap between what JWT demands and the reality of war. Second, I explain what AI DSS are and how they can significantly narrow this gap. Third, drawing on Hance’s argument in *Is There a Duty to Use Lethal Autonomous Weapons?*, I argue that when technology makes compliance with JWT feasible, states are obligated to adopt it. Finally, I consider two prominent objections to AI DSS.
+
+2.  The Epistemic Gap Between Just War Theory and War
+
+There is an epistemic gap between the demands of Just War Theory and the realities of warfare, most acutely within the domain of *jus in bello*, where the epistemic demands concern the conduct of hostilities under conditions of uncertainty and high stakes. At the most basic level, combatants must be able to distinguish between enemy combatants and civilians. Beyond this, they must assess whether expected incidental harm would be excessive relative to anticipated military advantage and determine which feasible precautions are available to minimize civilian harm. These requirements make the core *jus in bello* principles of distinction, proportionality, and precaution deeply information-sensitive. First, distinction presupposes accurate information about legitimate and non-legitimate targets. Second, proportionality requires plausible estimates of anticipated military advantage versus expected civilian harm. Thirdly, precaution in attack presupposes reliable information about the presence and concentration of civilians and other non-legitimate targets. Reliable information is therefore central to *jus in bello* compliance.
+
+Yet the fog of war makes these epistemic tasks exceptionally difficult, as battlefield environments are characterized by uncertainty, stress, fatigue, and sometimes deliberate enemy deception. The epistemic gap is particularly pronounced in asymmetric urban warfare. As Walzer observes, adversaries may deliberately embed themselves within civilian populations in order to “make it impossible for the enemy to fight without killing civilians,” thereby exploiting good-faith compliance to *jus in bello* requirements (Walzer 2023). This is known as the “asymmetry trap” making adherence to JWT in certain context even more challenging.
+
+3.  Artificial Intelligence Decision Support Systems as a tool to narrow the epistemic gap
+
+Artificial Intelligence Decision Support Systems (AI DSS) refers to specialized AI systems designed for multi-modal data integration, pattern recognition, target verification, and real-time battlefield representation and option generation. These systems can synthesize inputs from unmanned aerial vehicles, ground sensors, satellite imagery, thermal signatures, and communications data, far beyond the capacity of any single human (Zhou & Greipl 2024). Integrated and represented properly, these systems enable superior situational awareness of the battlefield. An agent supported by AI DSS would be significantly epistemically advantaged when making operative decisions compared to an agent without such support.
+
+The exact status of current AI DSS is unclear due to classification. Nevertheless, as Hance argues “whether it is five years or fifty years from now, no one should doubt that technology will, at some point in time, have the capability to comply with the LOAC \[Law of Armed Conflict\]” – that is, with the core requirements of *jus in bello* (Hance, 164). So even with disputes about technological capability today, the trajectory strongly suggests that they “will increasingly become better able to comply with the principles of proportionality and precautions in the attack” (Hance 2025, 172).
+
+Preliminary empirical work also supports this. The U.S. Air Force Research Laboratory’s DASH-2 experiment indicates that human–machine teams outperform human-only teams in tasks directly relevant to *jus in bello* requirements. For example, under simulated battlefield scenarios, the human-machine teams using AI DSS were able to “produce recommendations in under ten seconds and generated up to 30 times more options than human-only teams,” showcasing its potential use in real-life scenarios (U.S. Air Force 2024). While such findings do not by themselves establish moral conclusions, it highlights the potential of AI DSS to narrow the epistemic gap in warfare. By assisting agents in complex combat scenarios and generating a wider range of actions, these systems support agents complying with *jus in bello* requirements such as distinction, proportionality, and precaution of attack.
+
+4.  Feasibility and Moral Obligation
+
+The history of warfare reflects that as military technology becomes more precise, the moral and legal standards governing permissible conduct change accordingly. AI DSS are arguably the latest development in this trajectory. If more precise tools of war exist that make adherence to the principles of distinction, proportionality and precaution available, states committed to JWT have a duty to use them. What once counted as proportionate or precautionary no longer does so, once less harmful alternatives become available. Frowe makes the point that “V-2 rockets used in the Second World War fall into the class of blunt instrument, because they can only be used against entire cities.” (Frowe 2016, 117)
+
+The same logic may apply to the use of AI DSS. By improving the epistemic conditions under which military decisions are made, AI DSS can make military actions more precise, more targeted, and less harmful to civilians – like the shift from V-2 rockets to precision-guided missiles. As Hance writes, “the clear implication is that States have an increasingly higher duty to consider the most technologically precise weapons available to protect civilian lives and property.” (Hance 2025, 172) On this view, a state with access to AIBMS technology but declines to employ it may fail its moral obligations. This failure lies in accepting avoidable harm despite having the means to reduce it. This obligation is further codified in Article 57(2)(a)(ii) of Additional Protocol 1, which requires belligerents to “take all feasible precautions in the choice of means and methods of attack with a view to avoiding, and in any event to minimizing, incidental loss of civilian life, injury to civilians and damage to civilian objects.” On this reasoning, if AI DSS enhance states’ capacity to comply with *jus in bello* principles, thereby minimizing loss of civilian life, their use is not merely beneficial but may rise to the level of moral and legal obligation.
+
+5.  Two Prominent Objections to the use of AI DSS
+
+Two main objections to deploying AI DSS in warfare center around the diffusion of responsibility and the erosion of human judgment. JWT and its legal codification assume human agents who can be held morally responsible for their decisions. Critics highlight that advanced AI systems remove the meaningful role humans play in the decision-making process, to such an extent that it threatens the integrity of *jus in bello* principles and JWT as a whole.
+
+To start, it is important to make a distinction between AI DSS and Lethal Autonomous Weapon Systems (LAWS). LAWS are a different type of AI warfare technology that can independently select and use lethal force without human intervention. In contrast, AI DSS are intended to support – not replace – human decision-making by reducing the epistemic gap of warfare, ensuring that humans remain firmly "in the loop." This is crucial, but while this human oversight is necessary, it may not be sufficient to ensure proper moral agency.
+
+First, AI DSS leads to a diffusion of responsibility. By distributing responsibility across a complex socio-technical network of programmers, engineers, system designers and operators, it obfuscates who can be blamed for errors (Zhou & Greipl 2024). If a human-authorized AI DSS-recommended strike leads to unintended civilian harm and the loss of innocent lives, a huge problem arises in how to meaningfully assign responsibility across the network.
+
+Second, AI DSS may erode the role of human judgment in decision-making. Inevitably, these systems will include bias and they will frame options in ways that may lead combatants to uncritically over-rely on AI outputs. Over time, this can erode meaningful human judgment and reduce the human decision-making to a merely ratifying role, rather than actively partaking in the ethical deliberation process crucial for JWT (Zhou & Greipl 2024). Furthermore, if AI DSS reduces human input to merely approve of its “own” decision-making, then arguably the practical moral distinction made above between AI DSS and LAWS may not be very strong.
+
+To take stock, objections to AI DSS grounded in concerns about the diffusion of responsibility and the erosion of human judgment are serious, but they do not altogether make such systems inherently impermissible. Rather, they highlight the moral complexity of JWT in relation to current technological developments. While the use of AI DSS warrants caution, these objections highlight the need for careful design, governance, and integration within JWT rather than outright rejection. The ethical challenge, therefore, is not whether AI DSS should be used at all, but how they can be deployed in ways that preserve meaningful human agency and responsibility as military technology continues to advance.
+
+6.  Conclusion
+
+This paper has argued that the failures to adhere to the demands of Just War Theory are not solely due to moral indifference but due the epistemic condition of war itself. The principles of distinction, proportionality, and precaution place demanding informational requirements on combatants operating under conditions of uncertainty, stress, and deception. AIBMS systems have the potential to narrow this epistemic gap by improving situational awareness and expanding the range options available to human decision-makers.
+
+Drawing on Hance’s feasibility account of obligation, I have argued that if technologies are available that improve compliance with *jus in bello* and can reduce harm to civilians, States committed to Just War Theory are not only permitted, but may be morally required to adopt them. Two prominent objections were considered, the diffusions of responsibility and the erosion of meaningful human judgment. These objections impose important constraints on the use of AIBMS, however, does not make them inherently impermissible. Instead, they underscore the importance of properly designing and governing these technologies so they can enhance – rather than undermine – the moral aims of Just War Theory by making its demands more achievable in modern warfare.
+
+References:
+
+Frowe, Helen. *The Ethics of War and Peace: An Introduction*. 2nd ed. London: Routledge, 2016.
+
+Hance, Bryan. 2025. "Is There a Duty to Use Lethal Autonomous Weapons? How AI Will Change Warfare and the International Order." *Penn State Journal of Law & International Affairs* 13, no. 1 (February): 139–192.
+
+International Committee of the Red Cross. *Protocol Additional to the Geneva Conventions of 12 August 1949, and Relating to the Protection of Victims of International Armed Conflicts (Protocol I)*. 8 June 1977. <https://ihl-databases.icrc.org>.
+
+U.S. Air Force. 2024. "Air Force Experiments with AI Boosts Battle Management Speed, Accuracy." *Official United States Air Force Website*, October 17, 2024. <https://www.af.mil/News/Article-Display/Article/4310090/air-force-experiments-with-ai-boosts-battle-management-speed-accuracy/>
+
+Walzer, Michael. “Gaza and the Asymmetry Trap.” *Quillette*, December 1, 2023. <https://quillette.com/2023/12/01/gaza-and-the-asymmetry-trap/>.
+
+Walzer, Michael. *Just and Unjust Wars: A Moral Argument with Historical Illustrations*. 4th ed. New York: Basic Books, 2006.
+
+Zhou, Wen, and Anna Rosalie Greipl. “Artificial Intelligence in Military Decision-Making: Supporting Humans, Not Replacing Them.” *Humanitarian Law & Policy Blog* (International Committee of the Red Cross), August 29, 2024. <https://blogs.icrc.org/law-and-policy/2024/08/29/artificial-intelligence-in-military-decision-making-supporting-humans-not-replacing-them/>
