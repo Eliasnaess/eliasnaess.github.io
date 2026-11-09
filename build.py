@@ -40,6 +40,11 @@ def nice_date(d):
 
 def iso(d): return str(d) if d else ""
 
+def day_date(d):
+    if not d: return ""
+    d = d if isinstance(d, datetime.date) else datetime.date.fromisoformat(str(d))
+    return f"{d.day} {MONTHS[d.month-1][:3]} {d.year}"
+
 # ---------- markdown for papers ----------
 HEAD_WORDS = r"(introduction|conclusion|conclusions|references|bibliography|works cited|abstract|discussion)"
 def promote_headings(md):
@@ -195,7 +200,7 @@ def seminar_item(s, up=""):
     if s["images"]: bits.append("Infographic")
     if s["docs"] or s["notes"]: bits.append("Notes")
     return f'''<li><a href="{up}courses/{s["course"]}/{s["slug"]}/index.html"><span class="t">{E(s["title"])}</span>
-<span class="meta">{E(c["title"])}{(" · Week " + str(s["week"])) if s.get("week") else ""}{(" · " + str(s["date"])) if s.get("date") else ""}{(" · " + " · ".join(bits)) if bits else ""}</span></a></li>'''
+<span class="meta">{E(c["title"])}{(" · Week " + str(s["week"])) if s.get("week") else ""}{(" · " + day_date(s.get("date"))) if s.get("date") else ""}{(" · " + " · ".join(bits)) if bits else ""}</span></a></li>'''
 
 # ---------- media processing ----------
 def publish_seminar_media(s, dest):
@@ -281,7 +286,7 @@ for s in seminars:
         if pp: extra.append(f'<li><a href="../../../papers/{pp["slug"]}/index.html">Read my paper: {E(pp["title"])}</a></li>')
     links = (pdfs + "".join(extra))
     body = f'''<article class="seminar">
-<p class="kicker"><a href="../index.html">{E(c["title"])}</a>{(" · Week " + str(s["week"])) if s.get("week") else ""}{(" · " + str(s["date"])) if s.get("date") else ""}</p>
+<p class="kicker"><a href="../index.html">{E(c["title"])}</a>{(" · Week " + str(s["week"])) if s.get("week") else ""}{(" · " + day_date(s.get("date"))) if s.get("date") else ""}</p>
 <h1>{E(s["title"])}</h1>{f'<p class="lead">{E(s["summary"])}</p>' if s.get("summary") else ""}
 <div class="bar"><span>Seminar materials</span><span class="actions">{share_btn()}</span></div>
 {"".join(blocks)}
