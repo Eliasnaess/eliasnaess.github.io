@@ -195,7 +195,7 @@ def seminar_item(s, up=""):
     if s["images"]: bits.append("Infographic")
     if s["docs"] or s["notes"]: bits.append("Notes")
     return f'''<li><a href="{up}courses/{s["course"]}/{s["slug"]}/index.html"><span class="t">{E(s["title"])}</span>
-<span class="meta">{E(c["title"])}{(" · " + nice_date(s.get("date"))) if s.get("date") else ""}{(" · " + " · ".join(bits)) if bits else ""}</span></a></li>'''
+<span class="meta">{E(c["title"])}{(" · Week " + str(s["week"])) if s.get("week") else ""}{(" · " + str(s["date"])) if s.get("date") else ""}{(" · " + " · ".join(bits)) if bits else ""}</span></a></li>'''
 
 # ---------- media processing ----------
 def publish_seminar_media(s, dest):
@@ -263,12 +263,15 @@ for s in seminars:
     blocks = []
     for a in media["audio"]:
         dur = audio_duration(os.path.join(OUT, dest_rel, a))
-        label = "Deep-dive podcast" if len(media["audio"]) == 1 else os.path.splitext(a)[0].replace("-", " ").title()
+        stem = os.path.splitext(a)[0].lower()
+        label = {"deep-dive-long": "Deep-dive podcast · long version", "deep-dive-standard": "Deep-dive podcast · standard version"}.get(stem, "Deep-dive podcast" if len(media["audio"]) == 1 else stem.replace("-", " ").capitalize())
         blocks.append(f'<figure class="media audio"><figcaption>🎧 {label}{(" · " + dur) if dur else ""}</figcaption><audio controls preload="metadata" src="{a}"></audio>{"" if PREVIEW else f'<a class="dl" href="{a}" download>Download</a>'}</figure>')
     for v in media["video"]:
         blocks.append(f'<figure class="media"><figcaption>Video overview</figcaption><video controls preload="metadata" src="{v}"></video></figure>')
     for i in media["images"]:
-        blocks.append(f'<figure class="media img"><a href="{i}" target="_blank" rel="noopener"><img src="{i}" alt="{E(s["title"])} — infographic" loading="lazy"></a><figcaption>Infographic · tap to open full size</figcaption></figure>')
+        n_img = len(media["images"]); idx = media["images"].index(i) + 1
+        cap = os.path.splitext(i)[0].replace("-", " ").capitalize() if not i.startswith("infographic") else ("Infographic" + (f" {idx} of {n_img}" if n_img > 1 else ""))
+        blocks.append(f'<figure class="media img"><a href="{i}" target="_blank" rel="noopener"><img src="{i}" alt="{E(s["title"])} — {E(cap)}" loading="lazy"></a><figcaption>{E(cap)} · tap to open full size</figcaption></figure>')
     docs = "".join(f'<section class="prose notes">{render_md(open(os.path.join(s["dir"], d), encoding="utf-8").read())}</section>' for d in s["docs"])
     pdfs = "".join(f'<li><a href="{f}">{E(os.path.splitext(f)[0].replace("-", " ").title())} (PDF)</a></li>' for f in media["pdfs"])
     extra = []
@@ -278,7 +281,7 @@ for s in seminars:
         if pp: extra.append(f'<li><a href="../../../papers/{pp["slug"]}/index.html">Read my paper: {E(pp["title"])}</a></li>')
     links = (pdfs + "".join(extra))
     body = f'''<article class="seminar">
-<p class="kicker"><a href="../index.html">{E(c["title"])}</a>{(" · " + nice_date(s.get("date"))) if s.get("date") else ""}</p>
+<p class="kicker"><a href="../index.html">{E(c["title"])}</a>{(" · Week " + str(s["week"])) if s.get("week") else ""}{(" · " + str(s["date"])) if s.get("date") else ""}</p>
 <h1>{E(s["title"])}</h1>{f'<p class="lead">{E(s["summary"])}</p>' if s.get("summary") else ""}
 <div class="bar"><span>Seminar materials</span><span class="actions">{share_btn()}</span></div>
 {"".join(blocks)}
