@@ -269,7 +269,8 @@ for s in seminars:
     for a in media["audio"]:
         dur = audio_duration(os.path.join(OUT, dest_rel, a))
         stem = os.path.splitext(a)[0].lower()
-        label = {"deep-dive-long": "Deep-dive podcast · long version", "deep-dive-standard": "Deep-dive podcast · standard version"}.get(stem, "Deep-dive podcast" if len(media["audio"]) == 1 else stem.replace("-", " ").capitalize())
+        custom = (s.get("labels") or {}).get(stem)
+        label = custom or {"deep-dive-long": "Deep-dive podcast · long version", "deep-dive-standard": "Deep-dive podcast · standard version"}.get(stem, "Deep-dive podcast" if len(media["audio"]) == 1 else stem.replace("-", " ").capitalize())
         blocks.append(f'<figure class="media audio"><figcaption>🎧 {label}{(" · " + dur) if dur else ""}</figcaption><audio controls preload="metadata" src="{a}"></audio>{"" if PREVIEW else f'<a class="dl" href="{a}" download>Download</a>'}</figure>')
     for v in media["video"]:
         blocks.append(f'<figure class="media"><figcaption>Video overview</figcaption><video controls preload="metadata" src="{v}"></video></figure>')
