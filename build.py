@@ -84,6 +84,7 @@ def render_md(md): return markdown.markdown(md, extensions=MD_EXT)
 
 # ---------- load ----------
 site = yaml.safe_load(open(os.path.join(C, "site.yaml"), encoding="utf-8"))
+PODCASTS = site.get("podcasts", True)  # false = build without audio files (small Pages deploy)
 BASE = (site.get("base_url") or "").rstrip("/")
 
 courses = {}
@@ -245,6 +246,7 @@ def publish_seminar_media(s, dest):
     os.makedirs(dest, exist_ok=True)
     out = {"audio": [], "video": [], "images": [], "pdfs": []}
     for k in ("audio", "images", "video", "pdfs"):
+        if k == "audio" and not PODCASTS: continue  # podcasts paused: keep the deploy small (site.yaml podcasts: false)
         for f in s[k]: shutil.copy(os.path.join(s["dir"], f), dest); out[k].append(f)
     return out
 
@@ -347,6 +349,9 @@ for s in seminars:
         custom = (s.get("labels") or {}).get(stem)
         label = custom or {"deep-dive-long": "Deep-dive podcast · long version", "deep-dive-standard": "Deep-dive podcast · standard version"}.get(stem, "Deep-dive podcast" if len(media["audio"]) == 1 else stem.replace("-", " ").capitalize())
         blocks.append(f'<figure class="media audio"><figcaption>🎧 {label}{(" · " + dur) if dur else ""}</figcaption><audio controls preload="metadata" src="{a}"></audio>{"" if PREVIEW else f'<a class="dl" href="{a}" download>Download</a>'}</figure>')
+    if not PODCASTS and s["audio"]:
+        n_a = len(s["audio"])
+        blocks.append(f'<figure class="media audio"><figcaption>🎧 {n_a} deep-dive podcast{"s" if n_a != 1 else ""} for this seminar</figcaption><p class="hint">The podcasts are moving to faster hosting and will be back here shortly.</p></figure>')
     for v in media["video"]:
         blocks.append(f'<figure class="media"><figcaption>Video overview</figcaption><video controls preload="metadata" src="{v}"></video></figure>')
     for i in media["images"]:
