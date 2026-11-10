@@ -1,0 +1,53 @@
+course_arc:
+  - {week: 1, date: "2026-10-27", topic: "Recognizing Institutions", now: false}
+  - {week: 2, date: "2026-10-29", topic: "The Strength of Institutions", now: false}
+  - {week: 3, date: "2026-11-03", topic: "Institutional Weakness and Democracy", now: false}
+  - {week: 4, date: "2026-11-05", topic: "Institutional Weakness and Development", now: false}
+  - {week: 5, date: "2026-11-10", topic: "State Capacity", now: false}
+  - {week: 6, date: "2026-11-12", topic: "Society's Role in Building State Capacity", now: true}
+  - {week: 7, date: "2026-11-17", topic: "Delegation, Discretion, Ambiguity and Agency", now: false}
+  - {week: 8, date: "2026-11-19", topic: "Non-Compliance", now: false}
+  - {week: 9, date: "2026-11-24", topic: "Informal Institutions", now: false}
+  - {week: 10, date: "2026-11-26", topic: "Forbearance", now: false}
+  - {week: 11, date: "2026-12-01", topic: "Institutional Ambition", now: false}
+  - {week: 12, date: "2026-12-03", topic: "Institutional Stability and Fragility", now: false}
+  - {week: 13, date: "2026-12-08", topic: "Exogenous Institutional Strengthening", now: false}
+  - {week: 14, date: "2026-12-10", topic: "Endogenous Institutional Strengthening", now: false}
+  - {week: 15, date: "2026-12-15", topic: "In-class exam", now: false}
+context: "Tuesday's class treated state capacity as something the state has or lacks: Herbst's taxes, Cole's bureaucracy, Scott's legibility. This week turns to society: who the state can see, whom citizens trust, and which groups block or help enforcement. It sets up 17 Nov (discretion of street-level officials), 19 Nov (non-compliance and legitimacy) and 26 Nov (forbearance), where enforcement becomes a political choice."
+brief:
+  key_questions:
+    - "Why do weak states treat some groups worse than others, even without electoral motives or prejudice?"
+    - "How can a distrusted government get voluntary compliance in a crisis?"
+    - "Can society gain leverage over the state on a policy both sides want?"
+    - "When does social pressure produce enforcement, and when does it block it?"
+  key_concepts:
+    - {term: "Legibility and indirect rule", def: "Groups governed through intermediaries are less visible to the state, so officials know and extract less from them.", who: "Charnysh (2022)"}
+    - {term: "Informational capacity", def: "What the state knows about its population; measured by age heaping in census data.", who: "Charnysh (2022)"}
+    - {term: "Source accountability", def: "Messages are credible when the messenger can be monitored and sanctioned by the audience, e.g. local canvassers.", who: "Tsai, Morse & Blair (2020)"}
+    - {term: "Opportunistic accountability", def: "Society withholds cooperation on a shared-interest policy to extract other goods, if it is more patient and values the policy less.", who: "Grossman, Phillips & Rosenzweig (2017)"}
+    - {term: "Block rejection", def: "Whole communities refusing polio vaccination as a bargaining tactic.", who: "Grossman, Phillips & Rosenzweig (2017)"}
+    - {term: "Proactive, standoffish, forbearance", def: "Three state stances toward enforcement, shaped by diffuse social pressure for or against it.", who: "Amengual & Dargent (2020)"}
+    - {term: "Coproduced enforcement", def: "Allied social groups supply information and operational support the state lacks.", who: "Amengual & Dargent (2020)"}
+  takeaways:
+    - "Capacity is relational: the same state is strong toward some groups and weak toward others."
+    - "Intermediaries cut both ways: indirect rule blinds the state (Charnysh), while accountable local messengers make it credible (Tsai et al.)."
+    - "Noncompliance can be a bargaining strategy, not only a failure of capacity or legitimacy."
+    - "Enforcement is a political outcome: low capacity plus no social demand gives standoffish non-enforcement, not anarchy."
+  cases:
+    - {name: "1891/92 Russian famine", reading: "Charnysh (2022)", detail: "Districts with more Muslims saw higher mortality and later, smaller relief; Muslims were ruled via religious intermediaries."}
+    - {name: "Ebola door-to-door campaign, Liberia 2014–15", reading: "Tsai, Morse & Blair (2020)", detail: "Visited Monrovia residents were 9 pts more trusting of the Ministry of Health, 15 pts more supportive of control policies, 10 pts less likely to break rules."}
+    - {name: "Polio vaccination, northern Nigeria (Kano)", reading: "Grossman, Phillips & Rosenzweig (2017)", detail: "Communities stage block rejection to demand electricity, roads or clinics; builds on the 2003 vaccine boycott."}
+    - {name: "Mining, construction and environmental rules", reading: "Amengual & Dargent (2020)", detail: "Gold mining in Peru and Bolivia, construction in Peru, brickmakers in Córdoba and environmental rules in Santa Fe, Argentina."}
+  readings:
+    - {author: "Volha Charnysh", year: 2022, title: "Explaining Out-Group Bias in Weak States: Religion and Legibility in the 1891/1892 Russian Famine", pages: "World Politics 74(2): 205–248", one_line: "Discrimination in weak states can follow from illegibility: the state helps least those it cannot see."}
+    - {author: "Lily L. Tsai, Benjamin S. Morse & Robert A. Blair", year: 2020, title: "Building Credibility and Cooperation in Low-Trust Settings", pages: "Comparative Political Studies 53(10–11): 1582–1618", one_line: "Accountable local messengers let a distrusted government win compliance during Ebola."}
+    - {author: "Shelby Grossman, Jonathan Phillips & Leah R. Rosenzweig", year: 2017, title: "Opportunistic Accountability: State–Society Bargaining Over Shared Interests", pages: "Comparative Political Studies", one_line: "Patient communities can hold a shared-interest policy hostage to win other services."}
+    - {author: "Matthew Amengual & Eduardo Dargent", year: 2020, title: "The Social Determinants of Enforcement", pages: "In Brinks, Levitsky & Murillo (eds.), CUP, 161–182", one_line: "Social pressure, not capacity alone, decides whether weak states enforce, ignore or coproduce enforcement."}
+quiz:
+  - {type: mc, q: "What is Charnysh's third explanation for out-group bias, beyond electoral incentives and prejudice?", options: ["Differences in group size", "Variation in how legible each group is to the state", "Religious conflict between officials and Muslims", "Geographic distance from the capital"], answer: 1, why: "Indirect rule through religious intermediaries left the state with poor information about Muslim communities, so relief was withheld where repayment could not be monitored."}
+  - {type: mc, q: "Why were canvassers in Liberia's Ebola campaign credible, according to Tsai, Morse and Blair?", options: ["They were medical professionals", "They were local residents whom neighbours could monitor and sanction", "They offered cash incentives", "They were backed by armed police"], answer: 1, why: "Source accountability: being embedded in the community made the messengers answerable to their audience."}
+  - {type: mc, q: "In Grossman et al.'s bargaining model, society gains leverage over a shared-interest policy when it…", options: ["Values the policy more and is less patient", "Values the policy less and is more patient than the state", "Has stronger electoral power", "Has conflicting preferences with the state"], answer: 1, why: "The less-eager, more-patient side can credibly delay, so the state concedes other goods (e.g. services in exchange for vaccination)."}
+  - {type: mc, q: "In Amengual and Dargent, what follows from limited capacity plus no diffuse opposition to enforcement?", options: ["Proactive enforcement", "Forbearance", "Standoffish non-enforcement through indifference", "Coproduced enforcement"], answer: 2, why: "Without social demand, a resource-poor state simply does not bother: the standoffish outcome."}
+  - {type: short, q: "Compare the role of intermediaries in Charnysh and in Tsai, Morse and Blair. Why do they weaken the state in one case and strengthen it in the other?", model: "In Charnysh, religious intermediaries stood between state and community, keeping information from officials and making Muslims illegible. In Liberia, local canvassers were accountable to both the community and the campaign, so they carried credible information in both directions. What matters is whose agent the intermediary is and whether it can be monitored."}
+  - {type: short, q: "Using this week's readings, argue whether society builds state capacity or substitutes for it.", model: "Coproduction (Amengual & Dargent) and accountable messengers (Tsai et al.) show society lending capacity the state lacks, which can build trust and information over time. But Grossman et al. and Charnysh show society can also keep the state dependent or blind. A good answer distinguishes short-run substitution from long-run capacity-building."}

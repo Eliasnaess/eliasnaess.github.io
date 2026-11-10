@@ -152,6 +152,8 @@ for cslug, c in courses.items():
         sem["images"] = [f for f in files if f.lower().endswith(IMG)]
         sem["pdfs"] = [f for f in files if f.lower().endswith(".pdf")]
         sem["docs"] = [f for f in files if f.lower().endswith(".md") and f != "index.md"]
+        if "brief.yaml" in files:  # Classroom v2: at-a-glance brief, course arc, quiz
+            sem.update(yaml.safe_load(open(os.path.join(sdir, "brief.yaml"), encoding="utf-8")) or {})
         c["seminars"].append(sem); seminars.append(sem)
 for c in courses.values(): c["seminars"].sort(key=lambda s: str(s.get("date", "")), reverse=True)
 seminars.sort(key=lambda s: str(s.get("date", "")), reverse=True)
@@ -204,7 +206,7 @@ def page(rel, title, desc, body, og=None, depth=0, kind="website"):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{up}favicon.svg"><link rel="stylesheet" href="{up}style.css">
 </head><body>
-<header class="top"><a class="home" href="{up}index.html">{E(site['name'])}</a><nav><a href="{up}index.html#papers">Papers</a><a href="{up}index.html#courses">Courses</a></nav></header>
+<header class="top"><a class="home" href="{up}index.html">{E(site['name'])}</a><nav><a href="{up}classroom/index.html">Classroom</a><a href="{up}index.html#papers">Papers</a><a href="{up}index.html#courses">Courses</a></nav></header>
 <main>{body}</main>
 <footer class="foot"><span>© {datetime.date.today().year} {E(site['name'])}</span>{''.join(f'<a href="{E(l["url"])}">{E(l["label"])}</a>' for l in site.get("links", []) if l.get("url"))}</footer>
 <script src="{up}site.js" defer></script>
@@ -228,12 +230,14 @@ def paper_item(p, up=""):
 def seminar_item(s, up=""):
     c = courses[s["course"]]
     bits = []
+    if s.get("brief"): bits.append("Brief")
     if s["audio"]: bits.append("Podcast")
     if s["video"]: bits.append("Video")
     if s["images"]: bits.append("Infographic")
-    if s["docs"] or s["notes"]: bits.append("Notes")
+    if s.get("quiz"): bits.append("Quiz")
+    if s["docs"] and not s.get("brief"): bits.append("Notes")
     return f'''<li><a href="{up}courses/{s["course"]}/{s["slug"]}/index.html"><span class="t">{E(s["title"])}</span>
-<span class="meta">{E(c["title"])}{(" · Week " + str(s["week"])) if s.get("week") else ""}{(" · " + day_date(s.get("date"))) if s.get("date") else ""}{(" · " + " · ".join(bits)) if bits else ""}</span></a></li>'''
+<span class="meta">{E(c["title"])}{(" · " + c.get("unit","Week") + " " + str(s["week"])) if s.get("week") else ""}{(" · " + day_date(s.get("date"))) if s.get("date") else ""}{(" · " + " · ".join(bits)) if bits else ""}</span></a></li>'''
 
 # ---------- media processing ----------
 def publish_seminar_media(s, dest):
@@ -249,6 +253,56 @@ def audio_duration(path):
         r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", path], capture_output=True, text=True)
         return f"{math.ceil(float(r.stdout.strip())/60)} min"
     except Exception: return ""
+
+
+# ---------- Classroom v2 blocks ----------
+def li(items): return "".join(f"<li>{E(str(x))}</li>" for x in items or [])
+
+def glance_html(s):
+    b = s.get("brief") or {}
+    if not b: return ""
+    concepts = "".join(f'<details class="chip"><summary>{E(k.get("term",""))}</summary><p>{E(k.get("def",""))}{(" <span class=who>— " + E(k["who"]) + "</span>") if k.get("who") else ""}</p></details>' for k in b.get("key_concepts", []))
+    cases = "".join(f'<li><b>{E(c.get("name",""))}</b> <span class="who">{E(c.get("reading",""))}</span><br><span class="d">{E(c.get("detail",""))}</span></li>' for c in b.get("cases", []))
+    reads = "".join(f'<tr><td class="who">{E(str(r.get("author","")))} ({E(str(r.get("year","")))})</td><td><b>{E(r.get("title",""))}</b>{((" · pp. " if str(r["pages"])[:1].isdigit() else " · ") + E(str(r["pages"]))) if r.get("pages") else ""}<br><span class="d">{E(r.get("one_line",""))}</span></td></tr>' for r in b.get("readings", []))
+    arc = s.get("course_arc") or []
+    arc_html = ""
+    if arc:
+        nowi = next((i for i, a in enumerate(arc) if a.get("now")), -1)
+        dots = "".join(f'<li class="{"now" if i == nowi else ("past" if nowi >= 0 and i < nowi else "next")}" title="{E(str(a.get("topic","")))}"><span class="num">{E(str(a.get("week","")))}</span><span class="tp">{E(str(a.get("topic","")))}</span></li>' for i, a in enumerate(arc))
+        arc_html = f'<div class="arc-wrap"><h3>Where this fits in the course</h3>{f"<p>{E(s["context"])}</p>" if s.get("context") else ""}<ol class="arc">{dots}</ol></div>'
+    return f"""<section id="step-1" class="step">
+<h2><span class="n">1</span> At a glance <span class="hint">30 seconds</span></h2>
+<div class="glance">
+<div class="g-card"><h3>Key questions</h3><ol>{li(b.get("key_questions"))}</ol></div>
+<div class="g-card"><h3>Key concepts</h3><div class="chips">{concepts}</div><p class="hint">Tap a concept for its definition.</p></div>
+<div class="g-card"><h3>What you get out of it</h3><ul>{li(b.get("takeaways"))}</ul></div>
+<div class="g-card"><h3>Cases and evidence</h3><ul class="cases">{cases}</ul></div>
+</div>
+{f'<h3>The readings</h3><table class="reads">{reads}</table>' if reads else ""}
+{arc_html}
+</section>"""
+
+def quiz_html(s):
+    q = s.get("quiz") or []
+    if not q: return ""
+    items = []
+    for i, it in enumerate(q, 1):
+        if it.get("type") == "mc":
+            opts = "".join(f'<button type="button" class="opt" data-ok="{1 if j == it.get("answer") else 0}">{E(str(o))}</button>' for j, o in enumerate(it.get("options", [])))
+            items.append(f'<li class="qz mc"><p class="q">{E(it["q"])}</p><div class="opts">{opts}</div><p class="why" hidden>{E(it.get("why",""))}</p></li>')
+        else:
+            items.append(f'<li class="qz short"><p class="q">{E(it["q"])}</p><textarea rows="3" placeholder="Your answer in two or three sentences"></textarea><button type="button" class="reveal">Show model answer</button><p class="why" hidden>{E(it.get("model",""))}</p></li>')
+    n_mc = sum(1 for it in q if it.get("type") == "mc")
+    return f"""<section id="step-3" class="step">
+<h2><span class="n">3</span> Test your understanding</h2>
+<p class="hint">{n_mc} quick questions, then {len(q) - n_mc} to answer in your own words. Nothing is saved or sent.</p>
+<ol class="quiz" data-total="{n_mc}">{"".join(items)}</ol>
+<p class="score" hidden></p>
+</section>"""
+
+def steps_nav(s):
+    if not s.get("brief"): return ""
+    return """<ol class="steps-nav"><li><a href="#step-1"><b>1</b> Read the brief</a></li><li><a href="#step-2"><b>2</b> Listen</a></li>""" + ("""<li><a href="#step-3"><b>3</b> Test yourself</a></li>""" if s.get("quiz") else "") + "</ol>"
 
 # ---------- pages ----------
 # papers
@@ -307,15 +361,21 @@ for s in seminars:
         pp = next((q for q in papers if q["slug"] == s["paper"]), None)
         if pp: extra.append(f'<li><a href="../../../papers/{pp["slug"]}/index.html">Read my paper: {E(pp["title"])}</a></li>')
     links = (pdfs + "".join(extra))
+    listen = "".join(blocks)
+    if s.get("brief"):
+        listen = f'<section id="step-2" class="step"><h2><span class="n">2</span> Listen and look</h2><p class="hint">Two takes on the same readings: pick the length that fits your commute.</p>{listen}</section>'
     body = f'''<article class="seminar">
-<p class="kicker"><a href="../index.html">{E(c["title"])}</a>{(" · Week " + str(s["week"])) if s.get("week") else ""}{(" · " + day_date(s.get("date"))) if s.get("date") else ""}</p>
+<p class="kicker"><a href="../../../classroom/index.html">The Classroom</a> · <a href="../index.html">{E(c["title"])}</a>{(" · " + c.get("unit","Week") + " " + str(s["week"])) if s.get("week") else ""}{(" · " + day_date(s.get("date"))) if s.get("date") else ""}</p>
 <h1>{E(s["title"])}</h1>{f'<p class="lead">{E(s["summary"])}</p>' if s.get("summary") else ""}
 <div class="bar"><span>Seminar materials</span><span class="actions">{share_btn()}</span></div>
-{"".join(blocks)}
-{f'<div class="prose notes">{render_md(s["notes"])}</div>' if s["notes"] else ""}
+{steps_nav(s)}
+{glance_html(s)}
+{listen}
+{quiz_html(s)}
+{"" if s.get("brief") else (f'<div class="prose notes">{render_md(s["notes"])}</div>' if s["notes"] else "")}
 {docs}
 {f'<h2>Links</h2><ul class="links">{links}</ul>' if links else ""}
-<p class="credit">Podcasts and infographics are generated with Google NotebookLM from the course readings, then checked and curated by me.</p>
+<p class="credit">Podcasts and infographics are generated with Google NotebookLM from the course readings; the brief and quiz are drafted with Claude from the readings and syllabus. Everything is checked and curated by me.</p>
 </article>'''
     page(f"{dest_rel}/index.html", s["title"], s.get("summary") or f"Seminar materials for {c['title']}", body, og, depth=3, kind="article")
 
@@ -334,6 +394,15 @@ for c in live_courses:
 </article>'''
     page(f"courses/{c['slug']}/index.html", c["title"], c.get("summary", ""), body, og, depth=2)
 
+# classroom
+by_course = [c for c in live_courses if c["seminars"]]
+cl_body = '<article class="course"><p class="kicker">Leiden University · Seminar companions</p><h1>The Classroom</h1><p class="lead">One page per seminar: what the readings ask, the key concepts and cases, two podcast takes, and a short quiz to check you got it. Read, listen, test.</p>'
+for c in by_course:
+    cl_body += f'<h2>{E(c["title"])}</h2><ul class="list">{"".join(seminar_item(x, "../") for x in sorted(c["seminars"], key=lambda x: str(x.get("date","")), reverse=True))}</ul>'
+cl_body += "</article>"
+og_card(os.path.join(OUT, "og/classroom.png"), "Leiden University", "The Classroom", "Seminar briefs, podcasts and quizzes")
+page("classroom/index.html", "The Classroom", "Seminar briefs, podcasts and quizzes for Leiden courses.", cl_body, "og/classroom.png", depth=1)
+
 # home
 og_card(os.path.join(OUT, "og/home.png"), "Scholarship", site["name"], site.get("tagline", ""))
 strand_html = ""
@@ -348,7 +417,7 @@ body = f'''<section class="intro">
 <p class="bio">{E(site.get("bio",""))}</p>{f'<p class="links">{links}</p>' if links else ""}
 </section>
 <blockquote class="question"><span>The question underneath my work</span>{E(site.get("question",""))}</blockquote>
-{f'<section id="seminars"><h2>Latest seminar materials</h2><ul class="list">{"".join(seminar_item(s) for s in seminars[:6])}</ul></section>' if seminars else ""}
+{f'<section id="seminars"><h2>The Classroom <a class="more-link" href="classroom/index.html">all seminars →</a></h2><ul class="list">{"".join(seminar_item(s) for s in seminars[:6])}</ul></section>' if seminars else ""}
 <section id="featured"><h2>Selected papers</h2><div class="cards">{"".join(f"""<a class="card" href="papers/{p['slug']}/index.html"><span class="k">{E(courses.get(p['course'],{}).get('title',''))}</span><span class="t">{E(p['title'])}</span><span class="s">{E(p['summary'][:150].rsplit(' ',1)[0])}…</span></a>""" for p in featured)}</div></section>
 <section id="papers"><h2>All papers</h2>{strand_html}</section>
 <section id="courses"><h2>Courses</h2><ul class="list">{course_html}</ul></section>'''

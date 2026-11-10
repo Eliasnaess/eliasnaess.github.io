@@ -85,3 +85,44 @@ hr{border:0;border-top:1px solid var(--line);margin:2.5em 0}
 .foot a{text-decoration:none}.foot a:hover{color:var(--ink)}
 
 @media print{.top,.foot,.bar,.more,.listen{display:none}body{background:#fff;color:#000}.prose{font-size:12pt}main{max-width:none}}
+/* ---------- Classroom v2 ---------- */
+.more-link{font:500 .8rem var(--sans);color:var(--acc);margin-left:.6rem;text-decoration:none}
+.steps-nav{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;padding:0;margin:1.2rem 0 .4rem}
+.steps-nav a{display:inline-flex;align-items:center;gap:.45rem;padding:.45rem .85rem;border:1px solid var(--line);border-radius:99px;text-decoration:none;color:var(--ink);font:500 .88rem var(--sans);background:var(--bg2)}
+.steps-nav a b{display:inline-grid;place-items:center;width:1.35rem;height:1.35rem;border-radius:50%;background:var(--acc);color:var(--acc-ink);font-size:.75rem}
+.step{margin:2.4rem 0 0;scroll-margin-top:1rem}
+.step>h2{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.step>h2 .n{display:inline-grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:var(--acc);color:var(--acc-ink);font:600 1rem var(--sans)}
+.hint{color:var(--mute);font:400 .85rem var(--sans);margin:.2rem 0 .8rem}
+.step>h2 .hint{margin:0;font-size:.8rem}
+.glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}
+.g-card{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem}
+.g-card h3{margin:0 0 .5rem;font:600 .78rem var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--acc)}
+.g-card ol,.g-card ul{margin:0;padding-left:1.1rem;font-size:.95rem}.g-card li{margin:.3rem 0}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chip{border:1px solid var(--line);border-radius:8px;background:var(--bg);font:.88rem var(--sans)}
+.chip summary{cursor:pointer;padding:.3rem .65rem;list-style:none}.chip summary::-webkit-details-marker{display:none}
+.chip[open]{flex-basis:100%}.chip[open] summary{color:var(--acc);font-weight:600}
+.chip p{margin:0;padding:0 .65rem .55rem;color:var(--ink)}
+.who{color:var(--mute);font-size:.85em}.d{color:var(--mute);font-size:.9em}
+.cases{list-style:none;padding:0!important}.cases li{margin:.55rem 0!important}
+table.reads{width:100%;border-collapse:collapse;font-size:.93rem;margin:.4rem 0 1rem}
+table.reads td{padding:.6rem .4rem;border-bottom:1px solid var(--line);vertical-align:top}table.reads td:first-child{width:28%}
+.arc-wrap p{font-size:.95rem}
+.arc{list-style:none;display:flex;gap:.35rem;overflow-x:auto;padding:.3rem 0 .6rem;margin:0}
+.arc li{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;width:5.2rem;text-align:center;font:.72rem/1.25 var(--sans);color:var(--mute)}
+.arc .num{display:grid;place-items:center;width:1.7rem;height:1.7rem;border-radius:50%;border:1px solid var(--line);margin-bottom:.3rem;background:var(--bg)}
+.arc .past .num{background:var(--bg2)}
+.arc .now{color:var(--ink);font-weight:600}.arc .now .num{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
+.quiz{padding-left:1.2rem}
+.qz{margin:1.1rem 0}.qz .q{font-weight:600;margin:.2rem 0 .5rem}
+.opts{display:grid;gap:.4rem}
+.opt{text-align:left;padding:.55rem .8rem;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:.93rem var(--sans);cursor:pointer}
+.opt:hover{border-color:var(--acc)}
+.opt.right{border-color:#66800B;background:rgba(102,128,11,.12)}.opt.wrong{border-color:#AF3029;background:rgba(175,48,41,.10)}
+.qz.done .opt{cursor:default}
+.why{margin:.5rem 0 0;padding:.6rem .8rem;border-left:3px solid var(--acc);background:var(--bg2);font-size:.92rem}
+.qz textarea{width:100%;box-sizing:border-box;padding:.6rem;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:.93rem var(--sans)}
+.reveal{margin-top:.4rem;padding:.4rem .8rem;border:1px solid var(--acc);border-radius:99px;background:none;color:var(--acc);font:500 .85rem var(--sans);cursor:pointer}
+.score{font:600 1rem var(--sans);color:var(--acc)}
+@media (max-width:640px){table.reads,table.reads tbody,table.reads tr,table.reads td{display:block;width:auto!important}table.reads td:first-child{white-space:normal;border-bottom:0;padding-bottom:0}}

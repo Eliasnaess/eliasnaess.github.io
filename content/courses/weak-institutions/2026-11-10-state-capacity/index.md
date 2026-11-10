@@ -1,7 +1,7 @@
 ---
 title: "State Capacity"
 date: 2026-11-10
-week: 3
+week: 5
 summary: Why are some states unable to tax, govern or keep their promises? Herbst says peace and frozen borders let weak states survive without building capacity, Cole shows that capacity, not treaty ratification, drives human-rights compliance, and Scott shows what states have to simplify in order to see at all.
 labels:
   deep-dive-long: "Why laws fail without state capacity · long"

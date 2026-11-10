@@ -1,7 +1,7 @@
 ---
 title: "Society's Role in Building State Capacity"
 date: 2026-11-12
-week: 3
+week: 6
 summary: What can society do for a state that can barely see or reach it? Charnysh shows that famine relief followed legibility, Tsai, Morse and Blair show that trusted local canvassers made Liberia's Ebola campaign credible, Grossman and colleagues show communities refusing the polio vaccine to bargain for other services, and Amengual and Dargent show social groups blocking or coproducing enforcement.
 labels:
   deep-dive-long: "How citizens bargain with weak states · long"

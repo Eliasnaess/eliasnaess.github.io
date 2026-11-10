@@ -1,0 +1,51 @@
+course_arc:
+  - {week: 1, date: "2026-10-27", topic: "Recognizing Institutions", now: false}
+  - {week: 2, date: "2026-10-29", topic: "The Strength of Institutions", now: false}
+  - {week: 3, date: "2026-11-03", topic: "Institutional Weakness and Democracy", now: false}
+  - {week: 4, date: "2026-11-05", topic: "Institutional Weakness and Development", now: false}
+  - {week: 5, date: "2026-11-10", topic: "State Capacity", now: true}
+  - {week: 6, date: "2026-11-12", topic: "Society's Role in Building State Capacity", now: false}
+  - {week: 7, date: "2026-11-17", topic: "Delegation, Discretion, Ambiguity and Agency", now: false}
+  - {week: 8, date: "2026-11-19", topic: "Non-Compliance", now: false}
+  - {week: 9, date: "2026-11-24", topic: "Informal Institutions", now: false}
+  - {week: 10, date: "2026-11-26", topic: "Forbearance", now: false}
+  - {week: 11, date: "2026-12-01", topic: "Institutional Ambition", now: false}
+  - {week: 12, date: "2026-12-03", topic: "Institutional Stability and Fragility", now: false}
+  - {week: 13, date: "2026-12-08", topic: "Exogenous Institutional Strengthening", now: false}
+  - {week: 14, date: "2026-12-10", topic: "Endogenous Institutional Strengthening", now: false}
+  - {week: 15, date: "2026-12-15", topic: "In-class exam", now: false}
+context: "This is the first class of Part B, Explaining Weak Institutions. Weeks 1–4 defined institutional strength as enforcement and stability, and traced what weakness does to democracy and development; this week asks the prior question of whether the state can enforce at all. The capacity lens set up here returns on 12 Nov (society's role), 17 Nov (discretion and street-level bureaucrats) and 26 Nov (forbearance, where a capable state chooses not to enforce)."
+brief:
+  key_questions:
+    - "Why did war build strong states in Europe, and why did peace leave many post-colonial African states weak?"
+    - "When a state fails to honour a treaty, is that unwillingness or inability, and which kind of capacity matters?"
+    - "What does a state have to simplify about society in order to see, tax and govern it, and what is lost in the process?"
+  key_concepts:
+    - {term: "Ratchet effect", def: "War-time taxes and revenue institutions persist after the war, leaving the state permanently stronger.", who: "Herbst (1990)"}
+    - {term: "Juridical sovereignty", def: "Statehood guaranteed by international recognition and fixed borders (OAU, 1963) rather than by control of territory.", who: "Herbst (1990)"}
+    - {term: "Managerial vs enforcement school", def: "Noncompliance as incapacity and ambiguity (Chayes & Chayes) vs noncompliance as wilful choice that needs sanctions.", who: "Cole (2015)"}
+    - {term: "Bureaucratic efficacy", def: "Administrative quality and control of corruption; the capacity dimension that improves treaty compliance.", who: "Cole (2015)"}
+    - {term: "Territorial reach / coercive capacity", def: "Infrastructure and presence across the territory / military personnel and spending; coercion does not improve rights compliance.", who: "Cole (2015)"}
+    - {term: "Legibility", def: "The state's project of making society readable through standard grids: maps, measures, registers, surnames.", who: "Scott (1998)"}
+    - {term: "State simplification", def: "Narrow, aggregate representations that let officials act on complex realities, and often damage them.", who: "Scott (1998)"}
+  takeaways:
+    - "Capacity is not one thing: fiscal-extractive (Herbst), bureaucratic, territorial and coercive (Cole), and informational (Scott) dimensions can move independently."
+    - "Formal commitments without capacity stay facades: ratifying the ICCPR has no independent effect on rights practices once capacity is accounted for."
+    - "Coercive strength can substitute for administration, producing order without compliance (Cole's 'tyrannical peace')."
+    - "Seeing is a precondition for governing, but legibility schemes can destroy the local knowledge they replace (scientific forestry)."
+  cases:
+    - {name: "Early modern Europe vs post-1945 Africa", reading: "Herbst (1990)", detail: "Bellicist state-building vs peace under frozen colonial borders; African states drew 20.5% of revenue from trade taxes."}
+    - {name: "ICCPR compliance, cross-national panel", reading: "Cole (2015)", detail: "Two-stage models of physical-integrity and empowerment rights (CIRI data) against three capacity dimensions."}
+    - {name: "German scientific forestry", reading: "Scott (1998)", detail: "Mixed forest turned into Norway-spruce monoculture; yields collapsed in the second rotation (Waldsterben)."}
+    - {name: "Metric system and cadastral maps", reading: "Scott (1998)", detail: "Local measures and customary tenure replaced by standard units and freehold registers (e.g. Stolypin reforms, Torrens title)."}
+  readings:
+    - {author: "Jeffrey Herbst", year: 1990, title: "War and the State in Africa", pages: "International Security 14(4): 117–139", one_line: "Without existential war, African states never faced the pressure that forced European rulers to build tax states and national loyalty."}
+    - {author: "Wade M. Cole", year: 2015, title: "Mind the Gap: State Capacity and the Implementation of Human Rights Treaties", pages: "International Organization 69(2): 405–441", one_line: "Treaty compliance depends on bureaucratic capacity, not ratification; coercive capacity does not help."}
+    - {author: "James C. Scott", year: 1998, title: "Seeing Like a State, ch. 1 'Nature and Space'", pages: "Yale UP, ch. 1", one_line: "States govern by simplifying society into legible grids, which makes rule possible and can wreck what it simplifies."}
+quiz:
+  - {type: mc, q: "According to Herbst, what removed the external pressure that built European states from post-colonial Africa?", options: ["The OAU's 1963 commitment to freeze colonial borders and the absence of interstate war", "Cold War aid that replaced taxation entirely", "The spread of one-party rule after independence", "Colonial powers retaining control of tax collection"], answer: 0, why: "Frozen borders and peace meant no existential threat, so no ratchet effect in revenue or national identity."}
+  - {type: mc, q: "In Cole's findings, which capacity dimension improves compliance with human rights treaties?", options: ["Coercive capacity", "Bureaucratic efficacy", "Treaty ratification itself", "Military spending relative to GDP"], answer: 1, why: "Bureaucratic efficacy improves both kinds of rights; coercive capacity does not and can suppress empowerment rights."}
+  - {type: mc, q: "What happened to German scientifically managed forests in Scott's account?", options: ["They became a model of sustainable yield for two centuries", "Yields collapsed in the second rotation as the simplified ecosystem broke down", "They were abandoned because timber prices fell", "They were converted back to mixed forests by local peasants"], answer: 1, why: "Monoculture stripped the forest's ecological complexity; the result was Waldsterben and costly 'forest hygiene'."}
+  - {type: mc, q: "The 'managerial school' explains treaty noncompliance mainly as…", options: ["A strategic choice that requires sanctions", "A result of incapacity, ambiguity and time lags", "Cultural resistance to Western norms", "Lack of NGO pressure"], answer: 1, why: "Chayes & Chayes see most noncompliance as inability, not wilful defiance, which is the view Cole tests."}
+  - {type: short, q: "Herbst and Scott both treat taxation and legibility as central to state capacity. How do their explanations of weak capacity differ?", model: "Herbst explains weakness by missing incentives: without war, rulers had no reason to build extractive institutions. Scott focuses on the technique of rule: states need simplified, legible representations to govern, and the same simplifications can fail on complex realities. One asks why states build capacity; the other how capacity sees."}
+  - {type: short, q: "What is Cole's 'tyrannical peace', and why does it matter for the course's definition of institutional strength?", model: "States with high coercive but low bureaucratic capacity can impose order while suppressing empowerment rights, so formal rules exist and violence is contained without real compliance. It shows that strength means enforcement of the rule as written, not just the state's ability to control."}
