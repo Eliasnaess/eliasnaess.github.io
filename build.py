@@ -103,6 +103,38 @@ for f in sorted(os.listdir(os.path.join(C, "papers"))):
 papers.sort(key=lambda p: str(p.get("date", "")), reverse=True)
 
 AUDIO = (".mp3", ".m4a", ".wav", ".aac", ".ogg"); VIDEO = (".mp4", ".webm", ".mov"); IMG = (".png", ".jpg", ".jpeg", ".webp")
+
+# ---------- lean media (storage step 1) ----------
+# Sources are normalised in place, once, so content/ and docs/ hold identical small files
+# (git stores identical files once). Originals stay archived in the vault.
+AUDIO_KBPS = 48   # mono speech; ~21 MB per hour
+IMG_MAX_W = 2000; IMG_Q = 86
+
+def _probe(path):
+    r = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a:0", "-show_entries",
+                        "stream=channels,bit_rate", "-of", "csv=p=0", path], capture_output=True, text=True)
+    try:
+        ch, br = r.stdout.strip().split(",")[:2]; return int(ch), int(br)
+    except Exception: return None, None
+
+def slim_media(sdir):
+    for f in sorted(os.listdir(sdir)):
+        src = os.path.join(sdir, f); base, ext = os.path.splitext(f); ext = ext.lower()
+        if ext in AUDIO:
+            ch, br = _probe(src)
+            if ext == ".mp3" and ch == 1 and br and br <= (AUDIO_KBPS + 4) * 1000: continue
+            tmp = os.path.join(sdir, base + ".tmp.mp3")
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", src, "-map", "0:a:0", "-ac", "1",
+                            "-b:a", f"{AUDIO_KBPS}k", "-map_metadata", "0", tmp], check=True)
+            os.remove(src); os.replace(tmp, os.path.join(sdir, base + ".mp3"))
+            print(f"  slimmed audio  {f} -> {AUDIO_KBPS} kbps mono")
+        elif ext in IMG:
+            im = Image.open(src)
+            if ext in (".jpg", ".jpeg") and im.width <= IMG_MAX_W: continue
+            if im.width > IMG_MAX_W: im = im.resize((IMG_MAX_W, round(im.height * IMG_MAX_W / im.width)), Image.LANCZOS)
+            im.convert("RGB").save(os.path.join(sdir, base + ".jpg"), quality=IMG_Q, optimize=True)
+            if ext != ".jpg": os.remove(src)
+            print(f"  slimmed image  {f} -> {base}.jpg")
 seminars = []
 for cslug, c in courses.items():
     cdir = os.path.join(C, "courses", cslug)
@@ -111,6 +143,7 @@ for cslug, c in courses.items():
         sdir = os.path.join(cdir, s)
         if not os.path.isdir(sdir): continue
         meta, notes = read_front(os.path.join(sdir, "index.md")) if os.path.exists(os.path.join(sdir, "index.md")) else ({}, "")
+        slim_media(sdir)
         files = sorted(os.listdir(sdir))
         sem = dict(slug=s, course=cslug, dir=sdir, notes=notes, files=files, **meta)
         sem.setdefault("title", s.replace("-", " ").title())
@@ -204,22 +237,10 @@ def seminar_item(s, up=""):
 
 # ---------- media processing ----------
 def publish_seminar_media(s, dest):
+    # Sources are already lean (slim_media); copy bytes as-is so git deduplicates them.
     os.makedirs(dest, exist_ok=True)
     out = {"audio": [], "video": [], "images": [], "pdfs": []}
-    for f in s["audio"]:
-        src = os.path.join(s["dir"], f); base = os.path.splitext(f)[0]
-        if not f.lower().endswith(".mp3"):
-            dst = os.path.join(dest, base + ".mp3")
-            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", src, "-ac", "1", "-b:a", "64k", dst], check=True)
-            out["audio"].append(base + ".mp3")
-        else:
-            shutil.copy(src, dest); out["audio"].append(f)
-    for f in s["images"]:
-        src = os.path.join(s["dir"], f); im = Image.open(src)
-        if im.width > 2000: im = im.resize((2000, round(im.height * 2000 / im.width)))
-        name = os.path.splitext(f)[0] + ".jpg"
-        im.convert("RGB").save(os.path.join(dest, name), quality=86, optimize=True); out["images"].append(name)
-    for k in ("video", "pdfs"):
+    for k in ("audio", "images", "video", "pdfs"):
         for f in s[k]: shutil.copy(os.path.join(s["dir"], f), dest); out[k].append(f)
     return out
 
