@@ -1,0 +1,49 @@
+course_arc:
+  - {week: 1, date: "2026-09-10", topic: "Buddhist Philosophy of Consciousness in its Historical Context", now: false}
+  - {week: 2, date: "2026-09-17", topic: "Consciousness as Dharma: Abhidharma Taxonomy in the Kośa", now: false}
+  - {week: 3, date: "2026-09-24", topic: "Sarvāstivāda Epistemology: Does the Eye See?", now: false}
+  - {week: 4, date: "2026-10-01", topic: "Sarvāstivāda Metaphysics: Temporality", now: false}
+  - {week: 5, date: "2026-10-08", topic: "The Yogācāra Refutation of Early Buddhist Realism", now: false}
+  - {week: 6, date: "2026-10-15", topic: "Early Chinese Yogācāra I: Paramārtha's Philosophy of Mind", now: false}
+  - {week: 7, date: "2026-10-29", topic: "Early Chinese Yogācāra II: Consciousness and Tathāgatagarbha", now: false}
+  - {week: 8, date: "2026-11-05", topic: "Later Chinese Yogācāra I: Redefining Consciousness", now: false}
+  - {week: 9, date: "2026-11-12", topic: "Later Chinese Yogācāra II: Intentional Structure of Consciousness", now: true}
+  - {week: 10, date: "2026-11-19", topic: "Reframing the Idealism Debate I: A Shared World", now: false}
+  - {week: 11, date: "2026-11-26", topic: "Reframing the Idealism Debate II: Buddhist Illusionism", now: false}
+  - {week: 12, date: "2026-12-03", topic: "Yogācāra in Modernity: Humanistic Buddhism", now: false}
+  - {week: 13, date: "2026-12-10", topic: "Yogācāra in Modernity: Gendering Buddhist Modernism", now: false}
+context: "Last week introduced Xuanzang's store consciousness (ālayavijñāna, pp. 47–68) as the seed-bearing ground of experience, after Vasubandhu's Thirty Verses (Week 5) and Paramārtha's earlier model (Week 6). This week looks at how the eight consciousnesses are structured and related: what the store consciousness is associated with, how manas mistakes it for a self, and how the six sense consciousnesses perceive objects. Jiang's reading of the perceived and perceiving aspects and of the 'remote object' sets up Week 10 on a shared world and Week 11 on illusionism."
+brief:
+  key_questions:
+    - "How can Buddhists explain continuity of experience, memory and karma without positing an identical self?"
+    - "Why does every moment of consciousness have a perceived and a perceiving aspect, and what grounds them?"
+    - "What does manas take as its object, and why does it mistake it for a self?"
+    - "If there are no ascertainable external objects, how is a common world experienced?"
+  key_concepts:
+    - {term: "Ālayavijñāna (store consciousness)", def: "The eighth consciousness: stores seeds, is perfumed by the other consciousnesses, and is what manas attaches to as a self. Morally indeterminate and unveiled, with only indifferent feeling.", who: "Xuanzang, pp. 68–74; Jiang, p. 64"}
+    - {term: "Manas", def: "The seventh consciousness: constantly 'thinks', is supported by the ālaya and takes it as its object, and is always accompanied by four passions: self-delusion, self-view, self-conceit and self-love.", who: "Xuanzang, pp. 113–132"}
+    - {term: "Perceived and perceiving aspects (nimittabhāga, darśanabhāga)", def: "The object-aspect and subject-aspect that every moment of consciousness has within itself; consciousness is 'formed' (sākāra), not a blank receptor.", who: "Jiang, pp. 51–54"}
+    - {term: "Self-corroboratory aspect (svasaṃvittibhāga)", def: "The aspect from which the other two arise; each moment is aware of itself, which makes memory possible.", who: "Jiang, pp. 54–55"}
+    - {term: "Seeds (bīja) and perfuming (vāsanā)", def: "Real potentials in the ālaya that generate actual dharmas and are laid down by them; seed and fruit are simultaneous, seed and next seed successive.", who: "Jiang, pp. 60–63"}
+    - {term: "Qualified metaphysical idealism", def: "Jiang's label for Xuanzang: the realm of consciousness is the world as experienced; whether anything exists outside it is neither affirmed nor denied.", who: "Jiang, pp. 56–57"}
+    - {term: "Close and remote object (ālambanapratyaya)", def: "The close object is inside the perceiving consciousness; the remote object is a non-personal dimension that may or may not exist and is said to 'generate' the close one.", who: "Jiang, pp. 73–75"}
+  takeaways:
+    - "Identity is continuity misidentified: the ālaya is 'neither permanent nor impermanent', a stream 'like a torrent'."
+    - "Causality becomes grounding: the potential (seed) grounds the actual (dharma) at the same moment."
+    - "The self is produced from below: manas grasps the seeing part of the ālaya, a homogeneous stream, as a constant inner self."
+    - "Xuanzang privileges intentional analysis (consciousness is of an object) over causal explanation (consciousness is caused by an object), but does not fully reconcile them."
+  cases:
+    - {name: "Dreams and misperception", reading: "Jiang (2006)", detail: "Experience of objects without external counterparts: manovijñāna alone can create the sense of externality, as in a dream."}
+    - {name: "Many lamps, one light", reading: "Xuanzang via Jiang", detail: "Many consciousnesses manifesting similar things appear as one common world; Jiang reads the commonness as apparent rather than real."}
+    - {name: "The candle-wick", reading: "Xuanzang via Jiang", detail: "Seeds, the consciousness they produce, and the new seeds it perfumes cause each other like wick and flame."}
+    - {name: "Hearing a sound in samādhi", reading: "Xuanzang, pp. 156–157", detail: "Auditory consciousness can arise alongside good meditative mental consciousness, so the six consciousnesses need not share one moral nature."}
+  readings:
+    - {author: "Xuanzang", year: 1999, title: "Demonstration of Consciousness Only (trans. Cook)", pages: "68–74, 113–114, 123–132, 153–157", one_line: "The store consciousness, manas and the six sense consciousnesses, argued against Nanda, Citrabhānu and Sthiramati before Dharmapāla's view is adopted."}
+    - {author: "Tao Jiang", year: 2006, title: "Ālayavijñāna in the Cheng Weishi Lun: A Buddhist Theory of the Subliminal Mind", pages: "48–86", one_line: "Xuanzang largely succeeds in explaining the self and experience as a subliminal continuum without reification, at the cost of some tensions."}
+quiz:
+  - {type: mc, q: "Why is the store consciousness associated only with the feeling of indifference?", options: ["Because it has no object at all", "Because it is retribution only, subtle and continuous, and so is grasped as an unchanging self", "Because pleasure and pain are illusions", "Because it is morally good"], answer: 1, why: "It evolves from past karma without depending on present conditions; if it varied with pleasure and pain it could not be grasped as a changeless self (pp. 71–72)."}
+  - {type: mc, q: "On Dharmapāla's view, adopted by Xuanzang, what does manas take as its object?", options: ["The ālaya and its associated mental activities", "The seeing and seen parts of the ālaya", "The ālaya and its seeds", "Only the seeing part of the ālaya"], answer: 3, why: "Nanda, Citrabhānu and Sthiramati are rejected; manas grasps only the seeing part, a homogeneous stream that looks constant (pp. 128–130)."}
+  - {type: mc, q: "What does Jiang mean by calling Xuanzang a 'qualified metaphysical idealist'?", options: ["He denies that anything exists outside the mind", "The realm of consciousness is the experienced world, and existence outside it is neither affirmed nor denied", "He is a realist about the body but not the world", "He thinks only the ālaya is real"], answer: 1, why: "Real ātman and dharmas 'cannot be ascertained', and positing them adds nothing to explaining cognition (pp. 56–57)."}
+  - {type: mc, q: "According to Jiang, how does the simultaneity of seed and fruit change causality?", options: ["It makes causality impossible", "It turns causality into grounding: the potential grounds the actual", "It shows that all three times exist, as Sarvāstivāda holds", "It shows that causes always precede effects"], answer: 1, why: "Seed and dharma are simultaneous, seed and seed successive, so causation between dharmas is mediated by seeds and becomes grounding (pp. 62–63)."}
+  - {type: short, q: "Explain Jiang's 'tension' between intentional analysis and causal explanation in Xuanzang's account of the remote object.", model: "Xuanzang says consciousness may or may not have a remote object but always has a close one, which fits an intentional analysis where the real object is not necessary. Yet he also says the remote object produces the close one, a causal explanation that makes it necessary. Jiang thinks Xuanzang privileges the intentional analysis and resolves the issue by tracing the sense of a remote object to manovijñāna's externalising activity."}
+  - {type: short, q: "How does Xuanzang account for a shared world, and how convincing is it on Jiang's reading?", model: "Universal seeds in each ālaya manifest as a receptacle world that many beings experience alike, like many lamps giving one light, while private seeds give each their own body and senses. Jiang reads this as an apparent, not a real, commonness constituted by a community of private consciousnesses, which leaves the question for Week 10: is the shared world real or only apparent?"}

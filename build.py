@@ -304,7 +304,7 @@ def quiz_html(s):
 
 def steps_nav(s):
     if not s.get("brief"): return ""
-    return """<ol class="steps-nav"><li><a href="#step-1"><b>1</b> Read the brief</a></li><li><a href="#step-2"><b>2</b> Listen</a></li>""" + ("""<li><a href="#step-3"><b>3</b> Test yourself</a></li>""" if s.get("quiz") else "") + "</ol>"
+    return """<ol class="steps-nav"><li><a href="#step-1"><b>1</b> Read the brief</a></li><li><a href="#step-2"><b>2</b> """ + ("Listen" if s.get("audio") else "Look") + """</a></li>""" +("""<li><a href="#step-3"><b>3</b> Test yourself</a></li>""" if s.get("quiz") else "") + "</ol>"
 
 # ---------- pages ----------
 # papers
@@ -368,7 +368,9 @@ for s in seminars:
     links = (pdfs + "".join(extra))
     listen = "".join(blocks)
     if s.get("brief"):
-        listen = f'<section id="step-2" class="step"><h2><span class="n">2</span> Listen and look</h2><p class="hint">Two takes on the same readings: pick the length that fits your commute.</p>{listen}</section>'
+        step2 = "Listen and look" if (media["audio"] or s["audio"]) else "Look"
+        hint2 = '<p class="hint">Two takes on the same readings: pick the length that fits your commute.</p>' if len(media["audio"]) > 1 else ""
+        listen = f'<section id="step-2" class="step"><h2><span class="n">2</span> {step2}</h2>{hint2}{listen}</section>'
     body = f'''<article class="seminar">
 <p class="kicker"><a href="../../../classroom/index.html">The Classroom</a> · <a href="../index.html">{E(c["title"])}</a>{(" · " + c.get("unit","Week") + " " + str(s["week"])) if s.get("week") else ""}{(" · " + day_date(s.get("date"))) if s.get("date") else ""}</p>
 <h1>{E(s["title"])}</h1>{f'<p class="lead">{E(s["summary"])}</p>' if s.get("summary") else ""}
