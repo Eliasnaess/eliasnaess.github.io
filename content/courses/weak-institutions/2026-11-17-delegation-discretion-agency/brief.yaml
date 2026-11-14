@@ -1,0 +1,54 @@
+course_arc:
+  - {week: 1, date: "2026-10-27", topic: "Recognizing Institutions", now: false}
+  - {week: 2, date: "2026-10-29", topic: "The Strength of Institutions", now: false}
+  - {week: 3, date: "2026-11-03", topic: "Institutional Weakness and Democracy", now: false}
+  - {week: 4, date: "2026-11-05", topic: "Institutional Weakness and Development", now: false}
+  - {week: 5, date: "2026-11-10", topic: "State Capacity", now: false}
+  - {week: 6, date: "2026-11-12", topic: "Society's Role in Building State Capacity", now: false}
+  - {week: 7, date: "2026-11-17", topic: "Delegation, Discretion, Ambiguity and Agency", now: true}
+  - {week: 8, date: "2026-11-19", topic: "Non-Compliance", now: false}
+  - {week: 9, date: "2026-11-24", topic: "Informal Institutions", now: false}
+  - {week: 10, date: "2026-11-26", topic: "Forbearance", now: false}
+  - {week: 11, date: "2026-12-01", topic: "Institutional Ambition", now: false}
+  - {week: 12, date: "2026-12-03", topic: "Institutional Stability and Fragility", now: false}
+  - {week: 13, date: "2026-12-08", topic: "Exogenous Institutional Strengthening", now: false}
+  - {week: 14, date: "2026-12-10", topic: "Endogenous Institutional Strengthening", now: false}
+  - {week: 15, date: "2026-12-15", topic: "In-class exam", now: false}
+context: "Classes 5 and 6 asked what the state can see and reach, and what society does for or against it. This week looks inside the state: every rule passes through agents (provinces, executive bureaucracies, frontline officials) who have autonomy, interests and discretion of their own. It sets up Thursday's class on non-compliance (19 Nov), where citizens rather than officials bend the rules, and 24 Nov on informal institutions, which Ehrhardt already shows seeping into formal decisions."
+brief:
+  key_questions:
+    - "Why do some subnational governments carry out central policy while others quietly ignore it?"
+    - "Why does strong executive power survive a constitution written to constrain it?"
+    - "How do frontline officials behave when resources are scarce and rules are vague, and who pays for it?"
+    - "When a rule is ambiguous, whose norms fill the gap?"
+  key_concepts:
+    - {term: "Autonomy, capacity, interests", def: "Regulatory autonomy gives localities room for noncompliance; low capacity and rival local economic interests decide whether they use it.", who: "Van Aken & Lewis (2015)"}
+    - {term: "Legitimating issue", def: "A pressing national concern (here, internal security) that bureaucratic elites invoke to justify keeping their agency's size and power.", who: "Hassan (2015)"}
+    - {term: "Street-level bureaucrat (SLB)", def: "Frontline public servant whose discretion means they shape policy rather than merely implement it.", who: "Lipsky, via Lotta, Nieto-Morales & Peeters (2024)"}
+    - {term: "Informal privatisation, policy repair, alienative commitment", def: "Three agency patterns of SLBs in weak institutional settings: pursuing personal norms or interests, filling gaps with own resources, or retreating to job survival.", who: "Lotta, Nieto-Morales & Peeters (2024)"}
+    - {term: "Client differentiation", def: "A coping strategy in which officials ration time and help by sorting clients into deserving and difficult types.", who: "Mohammed (2024)"}
+    - {term: "Indigeneship", def: "Being recognised as 'native' to a state or locality, required for Federal Character quotas but never formally defined.", who: "Ehrhardt (2017)"}
+    - {term: "Formalisation of informal norms", def: "Discretion lets local norms of belonging decide formal outcomes such as who receives a certificate.", who: "Ehrhardt (2017)"}
+  takeaways:
+    - "Delegation creates a gap between the rule and its agent; weakness often lives in that gap, not in the rule itself."
+    - "Autonomy is a permission, not a motive: noncompliance needs both room (autonomy) and a reason (interests, low capacity)."
+    - "A new formal rule cannot constrain the agency that is meant to implement it, if that agency's elites have a stake in the old order (Hassan)."
+    - "Discretion is not neutral: under scarcity and ambiguity it tends to favour insiders, natives and elites (Mohammed, Ehrhardt)."
+  cases:
+    - {name: "Energy-intensity targets, China's 11th Five-Year Plan", reading: "Van Aken & Lewis (2015)", detail: "Provincial regression plus case studies of Shaanxi, Chongqing and Guangdong; provinces with more autonomy and strong local economic interests did worse."}
+    - {name: "Kenya's 2010 constitution", reading: "Hassan (2015)", detail: "The Provincial Administration was scrapped and rebuilt as the National Administration with nearly the same structure, functions and personnel; 50+ interviews and archives."}
+    - {name: "A rural hospital under Ghana's National Health Insurance Scheme", reading: "Mohammed (2024)", detail: "Interpretative phenomenological study with field diary; 'villagers' face waiting, short consultations, extra checks and denied premium exemptions, educated elites do not."}
+    - {name: "Indigeneship certificates in Kano, Nigeria", reading: "Ehrhardt (2017)", detail: "Perceptions survey of 420 respondents (2006–2008) in four neighbourhoods, from the Old City to Sabon Gari, plus interviews; officials favour traditional 'natives'."}
+  readings:
+    - {author: "Tucker Van Aken & Orion A. Lewis", year: 2015, title: "The Political Economy of Noncompliance in China: the case of industrial energy policy", pages: "Journal of Contemporary China 24(95): 798–822", one_line: "Provinces with autonomy, low capacity and rival economic interests underperform on central targets."}
+    - {author: "Mai Hassan", year: 2015, title: "Continuity despite change: Kenya's new constitution and executive power", pages: "Democratization 22(4): 587–609", one_line: "Bureaucratic elites exaggerated security threats to keep Kenya's executive bureaucracy, and presidential power, intact."}
+    - {author: "Gabriela Lotta, Fernando Nieto-Morales & Rik Peeters", year: 2024, title: "Street-level bureaucracy in weak state institutions: an introduction", pages: "In Peeters, Lotta & Nieto-Morales (eds.), Bristol University Press, ch. 1", one_line: "Brings Lipsky's frontline workers together with the concept of weak institutions."}
+    - {author: "Abdul-Rahim Mohammed", year: 2024, title: "'You can tell they are just villagers when you look at them'", pages: "In Peeters, Lotta & Nieto-Morales (eds.), ch. 10", one_line: "Scarcity turns discretion into differential treatment of rural patients in Ghana."}
+    - {author: "David Ehrhardt", year: 2017, title: "Indigeneship, bureaucratic discretion, and institutional change in Northern Nigeria", pages: "African Affairs 116(464): 462–483", one_line: "An undefined rule lets officials write local norms of belonging into formal decisions."}
+quiz:
+  - {type: mc, q: "In Van Aken and Lewis's model, what role does regulatory autonomy play?", options: ["It directly causes noncompliance", "It provides the space for noncompliance, which capacity and interests then shape", "It improves implementation by empowering local officials", "It matters only in poor provinces"], answer: 1, why: "Autonomy is a permission; provinces use it to disregard central targets when capacity is low or local economic interests oppose the policy."}
+  - {type: mc, q: "Why, according to Hassan, did Kenya's executive bureaucracy survive the 2010 constitution?", options: ["The courts struck down the reforms", "Donors funded the old structure", "Its elites protected their material interests by invoking exaggerated security threats", "Citizens voted to keep it"], answer: 2, why: "Security served as a legitimating issue that justified rebuilding the Provincial Administration as the National Administration."}
+  - {type: mc, q: "Which is NOT one of the three agency patterns in Lotta, Nieto-Morales and Peeters?", options: ["Informal privatisation", "Policy repair", "Alienative commitment", "Policy entrepreneurship"], answer: 3, why: "The three patterns are informal privatisation, policy repair and alienative commitment."}
+  - {type: mc, q: "What makes room for discrimination in Ehrhardt's Kano case?", options: ["A law excluding settlers", "Indigeneship is required but never formally defined", "Federal courts", "Election rigging"], answer: 1, why: "The undefined criterion gives local officials discretion, which they fill with ethnic and religious norms of belonging."}
+  - {type: short, q: "Compare Hassan and Ehrhardt: in which case is the weak institution chosen by self-interested agents, and in which does it emerge from ambiguity?", model: "Hassan's bureaucrats actively resist the new constitution to protect their material benefits, so weakness is chosen. In Ehrhardt the rule itself is ambiguous and officials fill it with locally salient norms, so weakness emerges from the design. Both show agents, not rules, deciding outcomes."}
+  - {type: short, q: "Is the differential treatment in Mohammed's hospital best seen as corruption, coping or policy failure?", model: "Mostly coping: under scarcity and high caseloads staff ration care by sorting clients, which Lotta et al. would place between alienative commitment and informal privatisation. But the effect is a policy failure, since the NHIS's goal of equal access is undermined for poor rural patients."}

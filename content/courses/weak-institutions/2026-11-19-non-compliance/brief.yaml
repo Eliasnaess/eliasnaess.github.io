@@ -1,0 +1,50 @@
+course_arc:
+  - {week: 1, date: "2026-10-27", topic: "Recognizing Institutions", now: false}
+  - {week: 2, date: "2026-10-29", topic: "The Strength of Institutions", now: false}
+  - {week: 3, date: "2026-11-03", topic: "Institutional Weakness and Democracy", now: false}
+  - {week: 4, date: "2026-11-05", topic: "Institutional Weakness and Development", now: false}
+  - {week: 5, date: "2026-11-10", topic: "State Capacity", now: false}
+  - {week: 6, date: "2026-11-12", topic: "Society's Role in Building State Capacity", now: false}
+  - {week: 7, date: "2026-11-17", topic: "Delegation, Discretion, Ambiguity and Agency", now: false}
+  - {week: 8, date: "2026-11-19", topic: "Non-Compliance", now: true}
+  - {week: 9, date: "2026-11-24", topic: "Informal Institutions", now: false}
+  - {week: 10, date: "2026-11-26", topic: "Forbearance", now: false}
+  - {week: 11, date: "2026-12-01", topic: "Institutional Ambition", now: false}
+  - {week: 12, date: "2026-12-03", topic: "Institutional Stability and Fragility", now: false}
+  - {week: 13, date: "2026-12-08", topic: "Exogenous Institutional Strengthening", now: false}
+  - {week: 14, date: "2026-12-10", topic: "Endogenous Institutional Strengthening", now: false}
+  - {week: 15, date: "2026-12-15", topic: "In-class exam", now: false}
+context: "Tuesday's class followed rules through officials who bend them. Today the rule-benders are citizens: why do people obey the state, and what does it mean when they don't? It builds on Tsai, Morse and Blair's Ebola campaign (12 Nov), where trust produced compliance, and sets up informal institutions (24 Nov) and forbearance (26 Nov), where the state itself chooses not to enforce."
+brief:
+  key_questions:
+    - "What makes citizens defer to the state without being coerced or monitored?"
+    - "Is non-compliance always a sign of weak institutions or low legitimacy?"
+    - "How can breaking a rule be a message to the state rather than a rejection of it?"
+    - "What happens to compliance when the government's legitimacy itself is contested?"
+  key_concepts:
+    - {term: "Legitimating beliefs", def: "Beliefs that the government has the right to rule, producing willing deference; grounded in evidence about government performance and updated over time.", who: "Levi & Sacks (2009)"}
+    - {term: "Quasi-voluntary compliance", def: "Compliance that is voluntary because people choose it, quasi because non-compliers can still be sanctioned.", who: "Levi (1988), via Levi & Sacks (2009)"}
+    - {term: "Procedural justice", def: "Perceived fairness of how authorities make and apply decisions, which raises willingness to defer.", who: "Levi & Sacks (2009); challenged by Tsai (2015)"}
+    - {term: "Constructive noncompliance", def: "Non-compliance that citizens justify as constructive criticism of policy performance and as information about local conditions.", who: "Tsai (2015)"}
+    - {term: "Voice vs exit", def: "Hirschman's distinction; Tsai reads constructive noncompliance as voice and loyalty, not exit from the state.", who: "Tsai (2015)"}
+    - {term: "Polarisation over legitimacy", def: "Supporters and opponents hold strong, opposed views of whether the government has the right to rule.", who: "Velasco-Guachalla et al. (2021)"}
+  takeaways:
+    - "Compliance is cheapest when it is quasi-voluntary, and that depends on a government seen as effective and fair."
+    - "Non-compliance is not one thing: it can be weak enforcement, opportunism, principled voice or partisan defiance."
+    - "In crises, contested legitimacy splits compliance along political lines, and decentralising policy can make it worse."
+    - "Measuring legitimacy through compliance is tricky: the same act can signal rejection in one context and loyal criticism in another."
+  cases:
+    - {name: "Tax deference in sub-Saharan Africa", reading: "Levi & Sacks (2009)", detail: "Afrobarometer 2005: 23,151 face-to-face interviews in 18 countries; dependent variable: agreeing that the tax department always has the right to make people pay taxes."}
+    - {name: "Rural China", reading: "Tsai (2015)", detail: "2008 survey of 2,000 rural households in 100 villages in five provinces, plus interviews; examples include tax non-payment and illegal house construction."}
+    - {name: "COVID-19 in Bolivia's nine departments", reading: "Velasco-Guachalla et al. (2021)", detail: "Daily data on departmental policy, cell-phone mobility, protests, cases and deaths after the 2019 crisis (Morales resigns, interim president Áñez); opposition departments relaxed national rules."}
+  readings:
+    - {author: "Margaret Levi & Audrey Sacks", year: 2009, title: "Legitimating beliefs: Sources and indicators", pages: "Regulation & Governance 3: 311–333", one_line: "Effective, fair government builds the legitimating beliefs that make compliance quasi-voluntary."}
+    - {author: "Lily L. Tsai", year: 2015, title: "Constructive Noncompliance", pages: "Comparative Politics 47(3): 253–279", one_line: "Citizens sometimes break rules to tell the state its policy doesn't fit, as voice rather than exit."}
+    - {author: "V. Ximena Velasco-Guachalla, Calla Hummel, Jami Nelson-Nuñez & Carew Boulding", year: 2021, title: "Legitimacy and Policy during Crises: Subnational COVID-19 Responses in Bolivia", pages: "Perspectives on Politics 20(2): 528–546", one_line: "Polarised legitimacy, not ideology, shaped which departments and citizens followed pandemic rules."}
+quiz:
+  - {type: mc, q: "What do Levi and Sacks use as their indicator of legitimating beliefs?", options: ["Actual tax payments", "Voting turnout", "Agreement that the tax department always has the right to make people pay taxes", "Trust in the president"], answer: 2, why: "They measure stated willingness to defer to tax authority; they admit they lack data on actual behaviour."}
+  - {type: mc, q: "Which finding in Tsai (2015) runs against standard procedural justice theory?", options: ["People who see officials as welcoming input are less willing to comply with decisions they think are wrong", "Poor villagers comply more", "Repression increases compliance", "Taxes are always paid"], answer: 0, why: "Procedural justice predicts more deference; Tsai finds such people more willing to disobey misguided policies while complying more in general."}
+  - {type: mc, q: "In Velasco-Guachalla et al., which departments deviated from the stricter national COVID-19 policy?", options: ["Those with the most cases", "Those aligned with the president", "Those opposed to the president", "The poorest departments"], answer: 2, why: "Opposition departments relaxed national policy and saw higher mobility and protest."}
+  - {type: mc, q: "Tsai places constructive noncompliance in Hirschman's scheme as…", options: ["Exit", "Voice and loyalty", "Neglect", "Revolution"], answer: 1, why: "Citizens break rules to communicate with the state, not to leave or reject it."}
+  - {type: short, q: "How could the same act, such as not paying a tax, mean different things in Levi and Sacks, Tsai, and Velasco-Guachalla et al.?", model: "For Levi and Sacks it signals weak legitimating beliefs after poor performance or unfair treatment. For Tsai it may be constructive criticism of a misguided policy by citizens who still support the state. For Velasco-Guachalla et al. it would reflect partisan rejection of a government whose legitimacy is contested."}
+  - {type: short, q: "Does decentralising policy help or hurt compliance in a legitimacy crisis? Use Bolivia.", model: "In Bolivia it hurt: handing COVID-19 policy to departments let opposition governors relax rules and politicise the crisis, deepening the legitimacy problem rather than solving it. Decentralisation helps only if subnational authorities are seen as legitimate and coordinate with the centre."}

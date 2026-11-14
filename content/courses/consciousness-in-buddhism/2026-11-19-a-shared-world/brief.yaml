@@ -1,0 +1,50 @@
+course_arc:
+  - {week: 1, date: "2026-09-10", topic: "Buddhist Philosophy of Consciousness in its Historical Context", now: false}
+  - {week: 2, date: "2026-09-17", topic: "Consciousness as Dharma: Abhidharma Taxonomy in the Kośa", now: false}
+  - {week: 3, date: "2026-09-24", topic: "Sarvāstivāda Epistemology: Does the Eye See?", now: false}
+  - {week: 4, date: "2026-10-01", topic: "Sarvāstivāda Metaphysics: Temporality", now: false}
+  - {week: 5, date: "2026-10-08", topic: "The Yogācāra Refutation of Early Buddhist Realism", now: false}
+  - {week: 6, date: "2026-10-15", topic: "Early Chinese Yogācāra I: Paramārtha's Philosophy of Mind", now: false}
+  - {week: 7, date: "2026-10-29", topic: "Early Chinese Yogācāra II: Consciousness and Tathāgatagarbha", now: false}
+  - {week: 8, date: "2026-11-05", topic: "Later Chinese Yogācāra I: Redefining Consciousness", now: false}
+  - {week: 9, date: "2026-11-12", topic: "Later Chinese Yogācāra II: Intentional Structure of Consciousness", now: false}
+  - {week: 10, date: "2026-11-19", topic: "Reframing the Idealism Debate I: A Shared World", now: true}
+  - {week: 11, date: "2026-11-26", topic: "Reframing the Idealism Debate II: Buddhist Illusionism", now: false}
+  - {week: 12, date: "2026-12-03", topic: "Yogācāra in Modernity: Humanistic Buddhism", now: false}
+  - {week: 13, date: "2026-12-10", topic: "Yogācāra in Modernity: Gendering Buddhist Modernism", now: false}
+context: "Weeks 8 and 9 built Xuanzang's model of eight consciousnesses: the store consciousness, manas and the six sense consciousnesses, with Jiang's 'qualified metaphysical idealism' and the remote object. This week asks the question that model raises: if all is consciousness only, how is there a world we share? Xuanzang argues the thesis, Kachru widens what 'thought' (vikalpa) can mean, and Li reads Kuiji on a shared, transformable lifeworld. It sets up Week 11 on Buddhist illusionism and the two modernity weeks, where Li's transformative sociality returns in humanistic Buddhism and gender."
+brief:
+  key_questions:
+    - "What exactly does 'consciousness only' deny, and what does it leave standing?"
+    - "If objects are transformations of consciousness, why do different beings seem to share one world?"
+    - "Is vikalpa only conceptual categorisation, or also the background against which a world shows up?"
+    - "What is shared when bodhisattvas and ordinary beings live in 'one' world, and can it be changed together?"
+  key_concepts:
+    - {term: "Vijñaptimātra (consciousness only)", def: "Real selves and dharmas do not exist apart from what consciousness transforms into; 'only' does not deny mental activities or emptiness.", who: "Xuanzang, pp. 233–234"}
+    - {term: "Imagination and the imagined", def: "Consciousness transforms into a seeing part (imagination, grasping) and a seen part (the imagined, grasped).", who: "Xuanzang, p. 233"}
+    - {term: "Four knowledges", def: "Bodhisattva insights supporting consciousness only, e.g. the same thing is perceived differently by ghosts, humans and gods according to karma.", who: "Xuanzang, pp. 234–236"}
+    - {term: "Vikalpa", def: "Usually 'conceptual thought'; Kachru recovers wider senses: construction, a phenomenological background, and a possible world.", who: "Kachru (2020)"}
+    - {term: "Narrow epistemic context", def: "The habit of reading Buddhist theories of thought only as accounts of how perception becomes conceptual judgement.", who: "Kachru (2020)"}
+    - {term: "Shared seeds and joint karma (gongye 共業)", def: "Seeds held in common in the store consciousness and actions performed jointly that sustain a shared lifeworld.", who: "Li (2025), reading Kuiji and the CWSL"}
+    - {term: "Second-person perspective", def: "Experience of the 'you' in bodily interaction; for Li it sustains the interdependence of the I and the we.", who: "Li (2025), after Garfield"}
+  takeaways:
+    - "'Consciousness only' is a claim about what exists apart from consciousness, framed as the Middle Way, not a simple denial of the world."
+    - "A shared world can be explained without external objects: through common karma and seeds, a common background, and interpersonal practice."
+    - "Kachru shows the idealism debate depends on what we take 'thought' to be; widen vikalpa and the debate changes shape."
+    - "Li turns metaphysics into ethics: if the shared world is jointly made, it can be jointly transformed, including injustices like sexism."
+  cases:
+    - {name: "Ghosts, humans and gods see different things", reading: "Xuanzang, p. 234", detail: "The first of the four knowledges: one and the same thing appears differently according to differences of karma."}
+    - {name: "Dreams", reading: "Xuanzang, objections and replies", detail: "Objects that seem fixed in place and time but are only mental; we fail to see waking objects as mind only because we have not yet awakened."}
+    - {name: "Ratnakīrti's lovesick man", reading: "Kachru (2020)", detail: "Intense thought (vikalpa) of his beloved makes him 'see' her as a real particular: thought ending in perception."}
+    - {name: "The Devī and Śāriputra", reading: "Li (2025)", detail: "In the Vimalakīrti Sūtra the Devī playfully swaps forms with Śāriputra, which Li reads as a model of jointly correcting sexism."}
+  readings:
+    - {author: "Xuanzang", year: 1999, title: "Demonstration of Consciousness Only, ch. VII 'Consciousness Only' (trans. Francis Cook, Three Texts on Consciousness Only, BDK)", pages: "233–240", one_line: "The core arguments, scriptural and rational, for consciousness only, and the first replies to objections."}
+    - {author: "Sonam Kachru", year: 2020, title: "As if a Stage: Towards an Ecological Concept of Thought in Indian Buddhist Philosophy", pages: "Journal of World Philosophies 5: 1–29", one_line: "Vikalpa can name the stage on which a world appears, not only the act of conceptualising it."}
+    - {author: "Jingjing Li", year: 2025, title: "What is shared by bodhisattvas and their target audience? Second-person experience and transformative sociality in Chinese Yogācāra", pages: "Journal of Buddhist Philosophy 7: 29–52", one_line: "Kuiji's shared lifeworld rests on I-we interdependence, so it can be transformed together."}
+quiz:
+  - {type: mc, q: "According to Xuanzang, what does the word 'only' in 'consciousness only' deny?", options: ["All dharmas, including emptiness", "Real things apart from consciousness", "Mental activities", "The existence of other minds"], answer: 1, why: "'Only' denies real selves and dharmas apart from consciousness, not mental activities or emptiness, which is why it is called the Middle Way."}
+  - {type: mc, q: "Which example belongs to Xuanzang's four knowledges?", options: ["A rope mistaken for a snake", "The same thing perceived differently by ghosts, humans and gods", "A lovesick man seeing his beloved", "A lamp lighting another lamp"], answer: 1, why: "The first knowledge: perception differs with karma, so objects cannot exist as they appear independently of consciousness."}
+  - {type: mc, q: "What does Kachru call the framework he wants to move beyond?", options: ["The narrow epistemic context", "Metaphysical idealism", "The two-truths doctrine", "Phenomenological reduction"], answer: 0, why: "It reads vikalpa only as the step from non-conceptual perception to conceptual judgement."}
+  - {type: mc, q: "For Li, what sustains the interdependence of the I and the we?", options: ["The first-person plural", "A collective meta-ego", "The second-person perspective", "External matter"], answer: 2, why: "Following Garfield, Li argues the second-person perspective in bodily interaction links personal and shared lifeworlds."}
+  - {type: short, q: "How would Xuanzang answer someone who says: 'We all see the same mountain, so it must exist outside our minds'?", model: "He would say the sameness is explained by similar transformations of consciousness from shared karmic seeds, as in Li's reading of joint karma, not by an external object. The dream analogy shows apparent fixity and publicity do not prove externality, and the four knowledges show the same 'thing' appears differently to different beings."}
+  - {type: short, q: "Is 'idealism' a good label for Yogācāra after this week's readings?", model: "Partly. Xuanzang denies real objects apart from consciousness, which looks idealist, but Kachru shows vikalpa can mean a background or world rather than private ideas, and Li frames the shared world as intersubjective and practical. 'Idealism' captures the ontology but misses the phenomenological and ethical dimensions."}
