@@ -1,0 +1,70 @@
+course_arc:
+  - {week: 1, date: "2026-10-26", topic: "Research questions, concepts, and causal inference", now: false}
+  - {week: 2, date: "2026-11-02", topic: "Cross-case methods: case selection and comparison", now: false}
+  - {week: 3, date: "2026-11-09", topic: "Within-case methods: process tracing", now: false}
+  - {week: 4, date: "2026-11-16", topic: "Ethics of field research; ethnographic research (after the quiz)", now: true}
+  - {week: 5, date: "2026-11-23", topic: "Interviewing", now: false}
+  - {week: 6, date: "2026-11-30", topic: "Archival research", now: false}
+  - {week: 7, date: "2026-12-07", topic: "Content and discourse analysis", now: false}
+  - {week: 8, date: "2026-12-16", topic: "Final exam", now: false}
+context: "Weeks 1–3 were about design: questions, cases and causal inference. From this week the course turns to collecting material in the field, starting with the ethics that govern all of it and with ethnography, the most immersive method. It picks up Schwartz-Shea & Yanow's interpretive logic from week 1 and sets up interviewing (23 Nov) and archives (30 Nov). Weeks 4–6 are the material for the written paper due 4 December."
+brief:
+  key_questions:
+    - "Which principles should govern research with human subjects, and where do they come from?"
+    - "Can a model of consent built for biomedical research fit open-ended immersion, where risks cannot all be known in advance?"
+    - "Is ethnography only description, or can it explain, generalize and be tested?"
+    - "What does a researcher owe interlocutors before, during and after fieldwork, including after publication?"
+  key_concepts:
+    - {term: "Research vs practice", def: "Research is designed to test a hypothesis and contribute to generalizable knowledge, usually under a protocol; practice aims only at the well-being of a particular person. If an activity contains any element of research, it should be reviewed.", who: "Belmont Report (1979), Part A"}
+    - {term: "Respect for persons, beneficence, justice", def: "Treat people as autonomous and protect those with diminished autonomy; do not harm and maximize benefits while minimizing harms (as an obligation, not charity); distribute the burdens and benefits of research fairly.", who: "Belmont Report (1979), Part B"}
+    - {term: "Informed consent", def: "Three elements: information, comprehension and voluntariness. Coercion is an overt threat of harm; undue influence is an excessive or improper reward or overture.", who: "Belmont Report (1979), Part C"}
+    - {term: "Interpretive vs noninterpretive ethnography", def: "Noninterpretive ethnography takes statements at face value and looks for structure and system; interpretive ethnography centres on meaning, and often on process and history.", who: "Wedeen (2010)"}
+    - {term: "Culture as semiotic practices", def: "A lens on meaning: how language and symbols represent politics and produce political effects, e.g. démocratie vs demokaraasi in Senegal.", who: "Wedeen (2010), drawing on Schaffer"}
+    - {term: "Participant observation", def: "Not just watching or talking but doing what your interlocutors do, so the researcher is both actor and spectator; it needs presence, the local languages and time.", who: "Wedeen (2010); Pisano (2024)"}
+    - {term: "The Game Plan and the saturation signal", def: "A written plan with a purpose statement, a preliminary point at which you can assert findings with confidence, a data management plan and limitations.", who: "Lebovits (2024)"}
+    - {term: "Procedural ethics vs ethics in practice", def: "IRB-style principles and review on one side; the 'ethically important moments' that arise after approval, which call for reflexivity and a relational ethics of care, on the other.", who: "Duquette-Rury (2024), after Guillemin & Gillam"}
+  takeaways:
+    - "Belmont gives three principles and three applications (consent, risk/benefit assessment, selection of subjects). It offers an analytical framework, not rules that settle every case: the prisoner example shows the principles can pull in opposite directions."
+    - "Wedeen argues that interpretive ethnography need not give up generalization, causal explanation or falsifiable claims; because meanings are socially available they can be checked by others. Its burden is to keep 'theoretical sovereignty' over messy field detail."
+    - "Pisano: ethnography means learning with people, letting their lives decide how you spend your time. It is not reproducible, so it demands rigor, transparency and care, including withholding material when circumstances change for your interlocutors."
+    - "Ethics does not end with the IRB stamp: preparation (Lebovits) and judgement in the moment (Duquette-Rury) carry the principles into the field."
+  cases:
+    - {name: "Tuskegee syphilis study", reading: "Belmont Report", detail: "Disadvantaged rural Black men were denied effective treatment so the study could continue; the report's example of injustice in selecting subjects."}
+    - {name: "Prisoners as volunteers", reading: "Belmont Report", detail: "Respect for persons seems to require letting prisoners volunteer, yet prison conditions may coerce them: a dilemma within a single principle."}
+    - {name: "Syria's cult of personality", reading: "Wedeen (2010)", detail: "Flagrantly fictitious slogans enforce obedience and induce complicity; Wedeen says this claim could be falsified by a noncharismatic regime where empty slogans generate real emotional commitment."}
+    - {name: "Démocratie vs demokaraasi", reading: "Wedeen (2010), citing Schaffer", detail: "Senegalese elites mean contested elections; many ordinary Wolof speakers mean equality and collective economic security."}
+    - {name: "'Pro-Russian' voting in eastern Ukraine", reading: "Pisano (2024)", detail: "Fieldwork showed that votes read as linguistic identity often reflected economics and vote manipulation."}
+    - {name: "'Victim of the regime' posters", reading: "Pisano (2024)", detail: "Opposition parties tear down their own posters to look persecuted, a deception hard to detect without local knowledge."}
+  readings:
+    - {author: "National Commission", year: 1979, title: "The Belmont Report", pages: "full report", one_line: "Three principles (respect for persons, beneficence, justice) and three applications (informed consent, risk/benefit assessment, selection of subjects)."}
+    - {author: "Wedeen", year: 2010, title: "Reflections on Ethnographic Work in Political Science", pages: "255–72", one_line: "Defends interpretive ethnography as able to explain, generalize and make falsifiable claims, while criticizing both 'raw data' positivism and navel-gazing reflexivity."}
+    - {author: "Lebovits", year: 2024, title: "Preparing for the Field: The Nuts and Bolts (Cyr & Goodman ch. 10)", pages: "ch. 10", one_line: "The field as spatial, relational and temporal; the Game Plan; IRB, gatekeepers, entry and exit; physical, social and personal preparation."}
+    - {author: "Pisano", year: 2024, title: "Ethnography (Cyr & Goodman ch. 20)", pages: "233–", one_line: "What ethnography requires (presence, participation, language, time), how to do it, and its caveats, with examples from Ukraine and Russia."}
+    - {author: "Duquette-Rury", year: 2024, title: "Navigating Ethical Issues and Choices in the Field (Cyr & Goodman ch. 27)", pages: "308– (skim)", one_line: "Beyond procedural ethics: ethically important moments and a relational ethics of care with five pillars."}
+quiz:
+  - type: mc
+    q: "According to the Belmont Report, which three elements make up informed consent?"
+    options: ["Information, comprehension and voluntariness", "Autonomy, beneficence and justice", "Disclosure, signature and debriefing", "Risk, benefit and selection"]
+    answer: 0
+    why: "Part C analyses consent as information, comprehension and voluntariness. Respect for persons, beneficence and justice are the three principles in Part B."
+  - type: mc
+    q: "A researcher offers participants in a poor community a payment so large that they feel unable to refuse. In Belmont's terms this is:"
+    options: ["Undue influence", "Coercion", "Incomplete disclosure", "A violation of beneficence only"]
+    answer: 0
+    why: "Coercion is an overt threat of harm; undue influence is an excessive, unwarranted or improper reward or overture to obtain compliance, especially with vulnerable subjects."
+  - type: mc
+    q: "Which claim does Wedeen (2010) defend?"
+    options: ["Interpretive ethnography can support generalizations and causal explanations, and some interpretive claims are falsifiable", "Ethnography should be folded into large-N work as a source of raw data", "Ethnographic writing is fiction and cannot be judged by evidence", "Only noninterpretive ethnography belongs in political science"]
+    answer: 0
+    why: "She argues interpretive social science need not forswear generalization or causal explanation, and gives her Syria argument as a falsifiable example, while rejecting fieldwork treated as raw data."
+  - type: mc
+    q: "For Pisano (2024), a researcher who conducts in-depth conversations through a translator during a two-week visit is most likely doing:"
+    options: ["Interview research, not ethnography", "Autoethnography", "Digital ethnography", "Participant observation"]
+    answer: 0
+    why: "Pisano says that working through a translator almost certainly means interview research, and that ethnography needs sustained presence and knowledge of context."
+  - type: short
+    q: "Why does Duquette-Rury argue that IRB approval is not enough? Name the distinction she draws and one tool she offers."
+    model: "She distinguishes procedural ethics (the IRB principles of respect for persons, beneficence and justice, set before fieldwork) from ethics in practice: 'ethically important moments' that arise after approval and cannot all be foreseen. Her tool is a relational ethics of care built on reflexivity, context sensitivity and five pillars: attentiveness, responsibility, responsiveness, competence and solidarity."
+  - type: short
+    q: "Using the Belmont Report and one ethnography reading, explain one tension between procedural consent and ethnographic fieldwork."
+    model: "Belmont's consent assumes the researcher can tell subjects the procedure, purposes, risks and benefits up front. In ethnography, Pisano shows that questions change in the field and risks can change after publication (she withheld material when Russia's war changed the risks for her interlocutors). So consent and risk assessment have to continue throughout the research and after it, which is Duquette-Rury's point about ethics in practice."
