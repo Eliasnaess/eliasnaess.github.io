@@ -155,6 +155,8 @@ for cslug, c in courses.items():
         sem["docs"] = [f for f in files if f.lower().endswith(".md") and f != "index.md"]
         if "brief.yaml" in files:  # Classroom v2: at-a-glance brief, course arc, quiz
             sem.update(yaml.safe_load(open(os.path.join(sdir, "brief.yaml"), encoding="utf-8")) or {})
+        if "prep.yaml" in files:  # Classroom quiz-prep edition: map, tables, flashcards, practice, mock quiz
+            sem["prep"] = yaml.safe_load(open(os.path.join(sdir, "prep.yaml"), encoding="utf-8")) or {}
         c["seminars"].append(sem); seminars.append(sem)
 for c in courses.values(): c["seminars"].sort(key=lambda s: str(s.get("date", "")), reverse=True)
 seminars.sort(key=lambda s: str(s.get("date", "")), reverse=True)
@@ -231,11 +233,12 @@ def paper_item(p, up=""):
 def seminar_item(s, up=""):
     c = courses[s["course"]]
     bits = []
+    if s.get("prep"): bits += ["Quiz prep", f'{len(s["prep"].get("mcq", []))} questions', "Flashcards", "Mock quiz"]
     if s.get("brief"): bits.append("Brief")
     if s["audio"]: bits.append("Podcast")
     if s["video"]: bits.append("Video")
     if s["images"]: bits.append("Infographic")
-    if s.get("quiz"): bits.append("Quiz")
+    if s.get("quiz") and not s.get("prep"): bits.append("Quiz")
     if s["docs"] and not s.get("brief"): bits.append("Notes")
     return f'''<li><a href="{up}courses/{s["course"]}/{s["slug"]}/index.html"><span class="t">{E(s["title"])}</span>
 <span class="meta">{E(c["title"])}{(" · " + c.get("unit","Week") + " " + str(s["week"])) if s.get("week") else ""}{(" · " + day_date(s.get("date"))) if s.get("date") else ""}{(" · " + " · ".join(bits)) if bits else ""}</span></a></li>'''
@@ -306,6 +309,60 @@ def steps_nav(s):
     if not s.get("brief"): return ""
     return """<ol class="steps-nav"><li><a href="#step-1"><b>1</b> Read the brief</a></li><li><a href="#step-2"><b>2</b> """ + ("Listen" if s.get("audio") else "Look") + """</a></li>""" +("""<li><a href="#step-3"><b>3</b> Test yourself</a></li>""" if s.get("quiz") else "") + "</ol>"
 
+
+# ---------- Classroom quiz-prep edition ----------
+PREP_TABS = [("plan", "Plan"), ("map", "Map"), ("tables", "Tables"), ("cards", "Flashcards"), ("practice", "Practice"),
+             ("mock", "Mock quiz"), ("explain", "Explain it"), ("traps", "Traps"), ("listen", "Listen & look")]
+
+def prep_html(s, c, media_blocks, docs_html):
+    P = s["prep"]; qz = P.get("quiz", {})
+    def esc(x): return E(str(x))
+    weeks = P.get("weeks", [])
+    facts = "".join(f'<div><span class="k">{k}</span><span class="v">{esc(v)}</span></div>' for k, v in
+                    [("When", qz.get("when", "")), ("Format", qz.get("format", "")), ("Weight", qz.get("weight", "")), ("Covers", qz.get("scope", ""))])
+    SEL = ' aria-selected="true"'
+    tabs = "".join(f'<button type="button" role="tab" data-tab="{k}"{SEL if i == 0 else ""}>{v}</button>' for i, (k, v) in enumerate(PREP_TABS))
+    plan = "".join(f'<li><b>{esc(p["when"])}</b><span>{esc(p["do"])}</span></li>' for p in P.get("plan", []))
+    wk_opts = "".join(f'<button type="button" data-w="{w["n"]}">Week {w["n"]}</button>' for w in weeks)
+    wk_opts_p = wk_opts.replace('data-w="1"', 'data-w="1" aria-pressed="true"', 1)
+    progress = "".join(f'<div class="pw" data-w="{w["n"]}"><span class="pl">Week {w["n"]} · {esc(w["title"])}</span><span class="bar2"><i></i></span><span class="pn">not started</span></div>' for w in weeks)
+    # map
+    mp = ""
+    for w in weeks:
+        rds = ""
+        for r in w["readings"]:
+            chips = "".join(f'<details class="chip"><summary>{esc(t)}</summary><p>{esc(d)}</p></details>' for t, d in r["concepts"])
+            rds += f'<details class="rd"><summary><span class="who">{esc(r["who"])}</span><span class="what">{esc(r["what"])}</span></summary><p class="claim">{esc(r["claim"])}</p><div class="chips">{chips}</div></details>'
+        mp += f'<h2 class="wk"><span class="n">{w["n"]}</span> {esc(w["title"])} <span class="hint">{esc(w["date"])}</span></h2>{rds}'
+    tbl = ""
+    for t in P.get("tables", []):
+        head = "".join(f"<th>{esc(h)}</th>" for h in t["head"])
+        rows = "".join("<tr>" + "".join(f"<td>{esc(x)}</td>" for x in r) + "</tr>" for r in t["rows"])
+        tbl += f'<h3>{esc(t["title"])}</h3><div class="tw"><table class="pt"><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>'
+    traps = "".join(f'<li><b>{esc(x["a"])}</b><span>{esc(x["b"])}</span></li>' for x in P.get("traps", []))
+    shorts = ""
+    for i, q in enumerate(P.get("short", []), 1):
+        chk = "".join(f'<li><label><input type="checkbox"> {esc(x)}</label></li>' for x in q.get("check", []))
+        shorts += f'<li class="sa" data-w="{q["w"]}"><p class="q"><span class="tag">Week {q["w"]}</span> {esc(q["q"])}</p><textarea rows="5" placeholder="Answer in your own words first — 4 to 6 sentences."></textarea><button type="button" class="reveal2">Show model answer</button><div class="model" hidden><p>{esc(q["model"])}</p><p class="hint">Did your answer…</p><ul class="chk">{chk}</ul></div></li>'
+    listen = media_blocks or (P.get("listen_note") and f'<p class="hint">{esc(P["listen_note"])}</p>') or '<p class="hint">The NotebookLM podcasts and infographics for this edition are on their way.</p>'
+    data = json.dumps({"mcq": P.get("mcq", []), "cards": P.get("cards", []), "quizdate": qz.get("date", ""), "key": f'prep-{s["course"]}-{s["slug"]}'}, ensure_ascii=False).replace("</", "<\\/")
+    return f"""<div class="quizfacts">{facts}<div class="cd"><span class="k">Countdown</span><span class="v" data-countdown></span></div></div>
+<nav class="ptabs" role="tablist">{tabs}</nav>
+<section class="ptab" id="tab-plan"><h2>Your progress</h2><div class="progress">{progress}</div><p class="hint">Progress is saved in this browser only. Nothing is sent anywhere.</p>
+<h2>A plan for the weekend</h2><ol class="plan">{plan}</ol>
+<h2>How to use this page</h2><p>Start with the <a href="#map" data-go="map">Map</a> to see each reading's argument and concepts. Lock in the <a href="#tables" data-go="tables">Tables</a> — they carry a large share of the likely questions. Drill <a href="#cards" data-go="cards">Flashcards</a>, then <a href="#practice" data-go="practice">Practice</a> by week (instant feedback and explanations). When you score 80%+ everywhere, sit a <a href="#mock" data-go="mock">Mock quiz</a> under time pressure. <a href="#explain" data-go="explain">Explain it</a> trains the deeper understanding that makes multiple-choice easy; <a href="#traps" data-go="traps">Traps</a> lists the distinctions examiners love.</p></section>
+<section class="ptab" id="tab-map" hidden><p class="hint">Tap a reading to open it, then tap a concept for its definition.</p>{mp}</section>
+<section class="ptab" id="tab-tables" hidden><p class="hint">Five tables that compress the course. If you can reproduce these from memory, most questions answer themselves.</p>{tbl}</section>
+<section class="ptab" id="tab-cards" hidden><div class="filters" data-for="cards"><button type="button" data-w="0" aria-pressed="true">All weeks</button>{wk_opts}<button type="button" data-again>Only 'again'</button><button type="button" data-shuffle>Shuffle</button></div>
+<div class="fc" tabindex="0"><div class="fc-in"><div class="fc-f"></div><div class="fc-b"></div></div></div>
+<div class="fc-ctl"><button type="button" data-fc="again">Again</button><button type="button" data-fc="flip" class="pri">Flip</button><button type="button" data-fc="got">Got it</button></div><p class="hint fc-n"></p><p class="hint">Keyboard: space flips, ← again, → got it.</p></section>
+<section class="ptab" id="tab-practice" hidden><div class="filters" data-for="practice">{wk_opts_p}<button type="button" data-w="0">All weeks</button></div><p class="hint">Pick an answer to see why it is right or wrong. Your score per week feeds the progress bars.</p><ol class="pq-list"></ol><p class="pscore"></p><button type="button" class="pri" data-reset-practice>Reset this set</button></section>
+<section class="ptab" id="tab-mock" hidden><div class="mock-start"><p>30 questions drawn at random from all three weeks, 30 minutes, no feedback until you submit — like the real thing.</p><button type="button" class="pri" data-mock-start>Start mock quiz</button></div><div class="mock-result" hidden></div><div class="mock-run" hidden><p class="timer" data-timer></p><ol class="mq-list"></ol><button type="button" class="pri" data-mock-submit>Submit</button></div></section>
+<section class="ptab" id="tab-explain" hidden><p class="hint">Write first, then compare. These are the questions behind the multiple-choice items.</p><ol class="sa-list">{shorts}</ol></section>
+<section class="ptab" id="tab-traps" hidden><p class="hint">Pairs that look alike and the one-line rule for telling them apart.</p><ul class="traps">{traps}</ul></section>
+<section class="ptab" id="tab-listen" hidden>{listen}{docs_html}</section>
+<script type="application/json" id="prep-data">{data}</script>"""
+
 # ---------- pages ----------
 # papers
 for p in papers:
@@ -371,6 +428,17 @@ for s in seminars:
         step2 = "Listen and look" if (media["audio"] or s["audio"]) else "Look"
         hint2 = '<p class="hint">Two takes on the same readings: pick the length that fits your commute.</p>' if len(media["audio"]) > 1 else ""
         listen = f'<section id="step-2" class="step"><h2><span class="n">2</span> {step2}</h2>{hint2}{listen}</section>'
+    if s.get("prep"):
+        docs_html = "".join(f'<details class="nlm"><summary>NotebookLM study guide · tap to open</summary><section class="prose notes">{render_md(open(os.path.join(s["dir"], d), encoding="utf-8").read())}</section></details>' for d in s["docs"])
+        body = f'''<article class="seminar prep">
+<p class="kicker"><a href="../../../classroom/index.html">The Classroom</a> · <a href="../index.html">{E(c["title"])}</a> · Quiz prep{(" · " + day_date(s.get("date"))) if s.get("date") else ""}</p>
+<h1>{E(s["title"])}</h1>{f'<p class="lead">{E(s["summary"])}</p>' if s.get("summary") else ""}
+<div class="bar"><span>Quiz prep · Weeks 1–3</span><span class="actions">{share_btn()}</span></div>
+{prep_html(s, c, "".join(blocks), docs_html)}
+<p class="credit">Practice questions, flashcards, map and tables are written with Claude from the readings and syllabus; podcasts, infographics and the study guide are generated with Google NotebookLM. Everything is checked against the readings and curated by me. Study material only — not affiliated with the course.</p>
+</article>'''
+        page(f"{dest_rel}/index.html", s["title"], s.get("summary") or "Quiz prep", body, og, depth=3, kind="article")
+        continue
     body = f'''<article class="seminar">
 <p class="kicker"><a href="../../../classroom/index.html">The Classroom</a> · <a href="../index.html">{E(c["title"])}</a>{(" · " + c.get("unit","Week") + " " + str(s["week"])) if s.get("week") else ""}{(" · " + day_date(s.get("date"))) if s.get("date") else ""}</p>
 <h1>{E(s["title"])}</h1>{f'<p class="lead">{E(s["summary"])}</p>' if s.get("summary") else ""}
