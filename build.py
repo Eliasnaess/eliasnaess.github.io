@@ -85,6 +85,11 @@ def render_md(md): return markdown.markdown(md, extensions=MD_EXT)
 # ---------- load ----------
 site = yaml.safe_load(open(os.path.join(C, "site.yaml"), encoding="utf-8"))
 PODCASTS = site.get("podcasts", True)  # false = build without audio files (small Pages deploy)
+# Audio on Cloudflare R2: when set, players stream from <audio_base_url>/<course>/<seminar>/<file>
+# and audio is not copied into docs/ (keeps the Pages deploy small). Upload keys are printed by the build.
+AUDIO_BASE = (site.get("audio_base_url") or "").rstrip("/")
+if AUDIO_BASE: PODCASTS = True
+R2_KEYS = []
 BASE = (site.get("base_url") or "").rstrip("/")
 
 courses = {}
@@ -250,6 +255,9 @@ def publish_seminar_media(s, dest):
     out = {"audio": [], "video": [], "images": [], "pdfs": []}
     for k in ("audio", "images", "video", "pdfs"):
         if k == "audio" and not PODCASTS: continue  # podcasts paused: keep the deploy small (site.yaml podcasts: false)
+        if k == "audio" and AUDIO_BASE:  # streamed from R2, not copied into docs/
+            for f in s[k]: R2_KEYS.append(f'{s["course"]}/{s["slug"]}/{f}'); out[k].append(f)
+            continue
         for f in s[k]: shutil.copy(os.path.join(s["dir"], f), dest); out[k].append(f)
     return out
 
@@ -401,11 +409,12 @@ for s in seminars:
         og_card(os.path.join(OUT, og), c["title"], s["title"], "Seminar notes")
     blocks = []
     for a in media["audio"]:
-        dur = audio_duration(os.path.join(OUT, dest_rel, a))
+        dur = audio_duration(os.path.join(s["dir"], a))
+        a_src = f'{AUDIO_BASE}/{s["course"]}/{s["slug"]}/{a}' if AUDIO_BASE else a
         stem = os.path.splitext(a)[0].lower()
         custom = (s.get("labels") or {}).get(stem)
         label = custom or {"deep-dive-long": "Deep-dive podcast · long version", "deep-dive-standard": "Deep-dive podcast · standard version"}.get(stem, "Deep-dive podcast" if len(media["audio"]) == 1 else stem.replace("-", " ").capitalize())
-        blocks.append(f'<figure class="media audio"><figcaption>🎧 {label}{(" · " + dur) if dur else ""}</figcaption><audio controls preload="metadata" src="{a}"></audio>{"" if PREVIEW else f'<a class="dl" href="{a}" download>Download</a>'}</figure>')
+        blocks.append(f'<figure class="media audio"><figcaption>🎧 {label}{(" · " + dur) if dur else ""}</figcaption><audio controls preload="metadata" src="{a_src}"></audio>{"" if PREVIEW else f'<a class="dl" href="{a_src}" download>Download</a>'}</figure>')
     if not PODCASTS and s["audio"]:
         n_a = len(s["audio"])
         blocks.append(f'<figure class="media audio"><figcaption>🎧 {n_a} deep-dive podcast{"s" if n_a != 1 else ""} for this seminar</figcaption><p class="hint">The podcasts are moving to faster hosting and will be back here shortly.</p></figure>')
@@ -501,3 +510,6 @@ page("index.html", site["name"], site.get("tagline", ""), body, "og/home.png", d
 # 404
 page("404.html", "Not found", "Page not found", f'<article><h1>Not here</h1><p class="lead">This page has moved or never existed. <a href="{(BASE + "/") if BASE else "index.html"}">Go to the home page</a>.</p></article>')
 print(f"Built {len(papers)} papers, {len(seminars)} seminar pages, {len(live_courses)} courses → docs/")
+if R2_KEYS:
+    print(f"Audio streams from {AUDIO_BASE} — make sure these are uploaded to R2 (same paths):")
+    for k in R2_KEYS: print("  " + k)
