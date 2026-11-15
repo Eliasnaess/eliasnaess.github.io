@@ -462,7 +462,7 @@ for s in seminars:
 {"" if s.get("brief") else (f'<div class="prose notes">{render_md(s["notes"])}</div>' if s["notes"] else "")}
 {docs}
 {f'<h2>Links</h2><ul class="links">{links}</ul>' if links else ""}
-<p class="credit">Podcasts and infographics are generated with Google NotebookLM from the course readings; the brief and quiz are drafted with Claude from the readings and syllabus. Everything is checked and curated by me.</p>
+<p class="credit">Podcasts and infographics are generated with Google NotebookLM from the course readings; the brief and quiz are drafted with Claude from the readings and syllabus. I curate what goes up, but AI-generated material can contain mistakes. Use these pages alongside the readings and seminars, and check anything important against the original texts.</p>
 </article>'''
     page(f"{dest_rel}/index.html", s["title"], s.get("summary") or f"Seminar materials for {c['title']}", body, og, depth=3, kind="article")
 
