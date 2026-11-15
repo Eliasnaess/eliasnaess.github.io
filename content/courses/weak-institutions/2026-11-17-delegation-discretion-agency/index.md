@@ -2,6 +2,9 @@
 title: "Delegation, Discretion, Ambiguity and Agency"
 date: 2026-11-17
 week: 7
+r2_audio:
+  deep-dive-long.mp3: 38
+  deep-dive-standard.mp3: 23
 summary: Every rule has to pass through someone. Van Aken and Lewis show Chinese provinces using their autonomy to skip energy targets, Hassan shows Kenya's executive bureaucracy outliving the constitution meant to tame it, Lotta, Nieto-Morales and Peeters bring frontline workers into the study of weak institutions, Mohammed shows Ghanaian hospital staff rationing care by who looks like a "villager", and Ehrhardt shows Kano officials filling an undefined rule with local norms of belonging.
 labels:
   deep-dive-long: "How bureaucrats rewrite official rules · long"

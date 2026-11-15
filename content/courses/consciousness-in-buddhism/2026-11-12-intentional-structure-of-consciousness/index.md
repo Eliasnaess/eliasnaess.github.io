@@ -2,6 +2,12 @@
 title: "Later Chinese Yogācāra II: The Intentional Structure of Consciousness"
 date: 2026-11-12
 week: 9
+labels:
+  deep-dive-long: "Why your ego is a cognitive glitch · long"
+  deep-dive-standard: "Xuanzang's architecture of store consciousness · standard"
+r2_audio:
+  deep-dive-long.mp3: 57
+  deep-dive-standard.mp3: 29
 summary: How do you explain continuity, a sense of self and a shared world without a self or external objects? Xuanzang's answer runs through the store consciousness, manas and the six sense consciousnesses, and Tao Jiang reads it as a "qualified metaphysical idealism" that turns causality into grounding, with an unresolved tension between intentional analysis and causal explanation.
 ---
 **Readings**

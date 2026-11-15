@@ -154,6 +154,9 @@ for cslug, c in courses.items():
         sem = dict(slug=s, course=cslug, dir=sdir, notes=notes, files=files, **meta)
         sem.setdefault("title", s.replace("-", " ").title())
         sem["audio"] = [f for f in files if f.lower().endswith(AUDIO)]
+        # Audio kept only on R2 (not in git): index.md front matter  r2_audio: {deep-dive-long.mp3: 38}  (file: minutes)
+        for f in (meta.get("r2_audio") or {}):
+            if f not in sem["audio"]: sem["audio"].append(f)
         sem["video"] = [f for f in files if f.lower().endswith(VIDEO)]
         sem["images"] = [f for f in files if f.lower().endswith(IMG)]
         sem["pdfs"] = [f for f in files if f.lower().endswith(".pdf")]
@@ -409,7 +412,7 @@ for s in seminars:
         og_card(os.path.join(OUT, og), c["title"], s["title"], "Seminar notes")
     blocks = []
     for a in media["audio"]:
-        dur = audio_duration(os.path.join(s["dir"], a))
+        dur = audio_duration(os.path.join(s["dir"], a)) if os.path.exists(os.path.join(s["dir"], a)) else (f'{(s.get("r2_audio") or {}).get(a)} min' if (s.get("r2_audio") or {}).get(a) else "")
         a_src = f'{AUDIO_BASE}/{s["course"]}/{s["slug"]}/{a}' if AUDIO_BASE else a
         stem = os.path.splitext(a)[0].lower()
         custom = (s.get("labels") or {}).get(stem)

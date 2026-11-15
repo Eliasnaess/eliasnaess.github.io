@@ -2,6 +2,12 @@
 title: "Reframing the Idealism Debate I: A Shared World"
 date: 2026-11-19
 week: 10
+labels:
+  deep-dive-long: "How Yogācāra explains a shared world · long"
+  deep-dive-standard: "How Yogācāra explains our shared world · standard"
+r2_audio:
+  deep-dive-long.mp3: 40
+  deep-dive-standard.mp3: 22
 summary: If everything is consciousness only, how do we share a world? Xuanzang lays out the proofs and the first objections, Kachru argues that vikalpa can name the stage a world appears on and not only the act of conceptualising, and Li reads Kuiji's shared lifeworld as something built, and changed, together.
 ---
 **Readings**
@@ -10,4 +16,4 @@ summary: If everything is consciousness only, how do we share a world? Xuanzang 
 - Sonam Kachru (2020), "As if a Stage: Towards an Ecological Concept of Thought in Indian Buddhist Philosophy", *Journal of World Philosophies* 5: 1–29
 - Jingjing Li (2025), "What is shared by bodhisattvas and their target audience? Second-person experience and transformative sociality in Chinese Yogācāra", *Journal of Buddhist Philosophy* 7: 29–52
 
-**Where to start:** the three infographics map the week: a concept map, the three authors side by side, and their argument chains. Then try *Test yourself*. The podcasts follow once audio hosting is set up.
+**Where to start:** the three infographics map the week: a concept map, the three authors side by side, and their argument chains. Then try *Test yourself*, or listen: the long episode (40 min) reads all three texts closely, the standard one (22 min) gives the essentials.

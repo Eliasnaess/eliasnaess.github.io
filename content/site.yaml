@@ -2,8 +2,8 @@
 name: Elias Andreas Næss
 tagline: Political theory, Norway in the world, and the philosophy of mind.
 base_url: "https://eliasnaess.github.io"
-# Podcasts paused 10 Nov 2026 to unblock the Pages deploy; set back to true (or remove) once audio is on Cloudflare R2.
-podcasts: false
+# Podcasts stream from Cloudflare R2 (bucket elias-classroom-audio, public r2.dev URL, set up 15 Nov 2026).
+audio_base_url: "https://pub-008effe854c149d5ba5bb1cb213a16ef.r2.dev"
 bio: >-
   I study political theory and philosophy at Leiden University (MSc Political Science; MPhil Philosophy of Law,
   Governance and Politics). Before that I worked at Norway's Permanent Mission to the UN in New York and with
