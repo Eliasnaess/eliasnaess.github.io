@@ -217,7 +217,7 @@ def page(rel, title, desc, body, og=None, depth=0, kind="website"):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{up}favicon.svg"><link rel="stylesheet" href="{up}style.css">
 </head><body>
-<header class="top"><a class="home" href="{up}index.html">{E(site['name'])}</a><nav><a href="{up}classroom/index.html">Classroom</a><a href="{up}index.html#papers">Papers</a><a href="{up}index.html#courses">Courses</a></nav></header>
+<header class="top"><a class="home" href="{up}index.html">{E(site['name'])}</a><nav><a href="{up}classroom/index.html">Classroom</a><a href="{up}index.html#papers">Papers</a><a href="{up}index.html#courses">Courses</a><a href="{up}index.html#about">About</a></nav></header>
 <main>{body}</main>
 <footer class="foot"><span>© {datetime.date.today().year} {E(site['name'])}</span>{''.join(f'<a href="{E(l["url"])}">{E(l["label"])}</a>' for l in site.get("links", []) if l.get("url"))}</footer>
 <script src="{up}site.js" defer></script>
@@ -501,13 +501,12 @@ course_html = "".join(f'''<li><a href="courses/{c["slug"]}/index.html"><span cla
 links = " · ".join(f'<a href="{E(l["url"])}">{E(l["label"])}</a>' for l in site.get("links", []) if l.get("url"))
 body = f'''<section class="intro">
 <h1>{E(site["name"])}</h1><p class="tagline">{E(site.get("tagline",""))}</p>
-<p class="bio">{E(site.get("bio",""))}</p>{f'<p class="links">{links}</p>' if links else ""}
 </section>
-<blockquote class="question"><span>The question underneath my work</span>{E(site.get("question",""))}</blockquote>
-{f'<section id="seminars"><h2>The Classroom <a class="more-link" href="classroom/index.html">all seminars →</a></h2><ul class="list">{"".join(seminar_item(s) for s in seminars[:6])}</ul></section>' if seminars else ""}
+{f'<section id="seminars"><h2>The Classroom <a class="more-link" href="classroom/index.html">All seminars →</a></h2><p class="section-lede">A companion page for each seminar: a brief of the readings, two podcast takes and a short quiz.</p><ul class="list">{"".join(seminar_item(s) for s in seminars[:6])}</ul></section>' if seminars else ""}
 <section id="featured"><h2>Selected papers</h2><div class="cards">{"".join(f"""<a class="card" href="papers/{p['slug']}/index.html"><span class="k">{E(courses.get(p['course'],{}).get('title',''))}</span><span class="t">{E(p['title'])}</span><span class="s">{E(p['summary'][:150].rsplit(' ',1)[0])}…</span></a>""" for p in featured)}</div></section>
 <section id="papers"><h2>All papers</h2>{strand_html}</section>
-<section id="courses"><h2>Courses</h2><ul class="list">{course_html}</ul></section>'''
+<section id="courses"><h2>Courses</h2><ul class="list">{course_html}</ul></section>
+<section id="about" class="about"><h2>About</h2><p class="bio">{E(site.get("bio",""))}</p>{f'<p class="links">{links}</p>' if links else ""}</section>'''
 page("index.html", site["name"], site.get("tagline", ""), body, "og/home.png", depth=0)
 
 # 404
