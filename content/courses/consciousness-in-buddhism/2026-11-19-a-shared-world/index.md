@@ -10,4 +10,4 @@ summary: If everything is consciousness only, how do we share a world? Xuanzang 
 - Sonam Kachru (2020), "As if a Stage: Towards an Ecological Concept of Thought in Indian Buddhist Philosophy", *Journal of World Philosophies* 5: 1–29
 - Jingjing Li (2025), "What is shared by bodhisattvas and their target audience? Second-person experience and transformative sociality in Chinese Yogācāra", *Journal of Buddhist Philosophy* 7: 29–52
 
-Podcasts and infographics for this seminar are on their way.
+**Where to start:** the three infographics map the week: a concept map, the three authors side by side, and their argument chains. Then try *Test yourself*. The podcasts follow once audio hosting is set up.
