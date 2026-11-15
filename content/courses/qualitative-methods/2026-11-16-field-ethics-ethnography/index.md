@@ -15,4 +15,4 @@ labels:
 - Jessica Pisano (2024), "Ethnography", in Cyr & Goodman (eds.), ch. 20
 - Lauren Duquette-Rury (2024), "Navigating Ethical Issues and Choices in the Field", in Cyr & Goodman (eds.), ch. 27 (skim)
 
-**Where to start:** read *At a glance* for the five readings on one screen, then try the six questions in *Test yourself*. The podcasts and infographics follow once NotebookLM has finished them.
+**Where to start:** read *At a glance* for the five readings on one screen, then try the six questions in *Test yourself*. The infographic maps all five readings on one page.
