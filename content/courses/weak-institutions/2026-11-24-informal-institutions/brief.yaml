@@ -1,0 +1,53 @@
+course_arc:
+  - {week: 1, date: "2026-10-27", topic: "Recognizing Institutions", now: false}
+  - {week: 2, date: "2026-10-29", topic: "The Strength of Institutions", now: false}
+  - {week: 3, date: "2026-11-03", topic: "Institutional Weakness and Democracy", now: false}
+  - {week: 4, date: "2026-11-05", topic: "Institutional Weakness and Development", now: false}
+  - {week: 5, date: "2026-11-10", topic: "State Capacity", now: false}
+  - {week: 6, date: "2026-11-12", topic: "Society's Role in Building State Capacity", now: false}
+  - {week: 7, date: "2026-11-17", topic: "Delegation, Discretion, Ambiguity and Agency", now: false}
+  - {week: 8, date: "2026-11-19", topic: "Non-Compliance", now: false}
+  - {week: 9, date: "2026-11-24", topic: "Informal Institutions", now: true}
+  - {week: 10, date: "2026-11-26", topic: "Forbearance", now: false}
+  - {week: 11, date: "2026-12-01", topic: "Institutional Ambition", now: false}
+  - {week: 12, date: "2026-12-03", topic: "Institutional Stability and Fragility", now: false}
+  - {week: 13, date: "2026-12-08", topic: "Exogenous Institutional Strengthening", now: false}
+  - {week: 14, date: "2026-12-10", topic: "Endogenous Institutional Strengthening", now: false}
+  - {week: 15, date: "2026-12-15", topic: "In-class exam", now: false}
+context: "Last week asked why citizens break the state's rules. This class asks what fills the gap when formal rules are weak: unwritten rules that people share, expect and enforce. It builds on Brinks, Levitsky and Murillo's types of institutional weakness (29 Oct) and Helmke and Rath on democratic norms (3 Nov), and sets up forbearance (26 Nov), where the state itself chooses not to enforce."
+brief:
+  key_questions:
+    - "When formal rules are weak, what actually structures political behaviour?"
+    - "How do informal rules interact with formal ones: do they undermine, replace, bend or strengthen them?"
+    - "Why do anticorruption reforms fail where corruption is the norm?"
+    - "Can unwritten bureaucratic norms build state capacity under the same formal rules?"
+  key_concepts:
+    - {term: "Informal institution", def: "Socially shared rules, usually unwritten, created, communicated and enforced outside officially sanctioned channels.", who: "Helmke & Levitsky (2004)"}
+    - {term: "Weak institution vs informal institution", def: "A formal rule can be ineffective without any informal rule behind it; weakness is not the same as informality.", who: "Helmke & Levitsky (2004)"}
+    - {term: "Four types", def: "Complementary (effective formal, convergent), accommodating (effective formal, divergent), competing (ineffective formal, divergent), substitutive (ineffective formal, convergent).", who: "Helmke & Levitsky (2004)"}
+    - {term: "Principal-agent view of corruption", def: "Corruption as agents exploiting information gaps, fixed by monitoring and sanctions from principled principals.", who: "Persson, Rothstein & Teorell (2013), criticising it"}
+    - {term: "Corruption as a collective action problem", def: "Where corruption is expected, honesty does not pay, so no one has an interest in enforcing reform: a second-order collective action problem.", who: "Persson, Rothstein & Teorell (2013)"}
+    - {term: "Bureaucratic norms", def: "Unwritten rules that guide public officials in how they apply policy and deal with citizens.", who: "Mangla (2015)"}
+    - {term: "Deliberative vs legalistic norms", def: "Deliberative: officials adapt policy locally and work with civic groups; legalistic: strict rule-following and hierarchy that sideline citizens.", who: "Mangla (2015)"}
+  takeaways:
+    - "Good institutional analysis needs both formal and informal rules: the real incentives can sit in the unwritten ones."
+    - "Informal rules cut both ways: they can subvert weak formal rules (corruption, police impunity) or make them work (Himachal Pradesh)."
+    - "Systemic corruption is an equilibrium of shared expectations, so fixing individual incentives is not enough; expectations have to shift."
+    - "The same formal policy produces different results depending on the unwritten norms of the bureaucracy that implements it."
+  cases:
+    - {name: "Mexico's dedazo and concertacesiones; Chile's Concertación; Peru's rondas campesinas", reading: "Helmke & Levitsky (2004)", detail: "Examples for the typology: presidential succession by unwritten rule; informal electoral dispute deals (substitutive); executive-legislative power-sharing (accommodating); self-defence patrols where courts and police failed (substitutive)."}
+    - {name: "Kenya and Uganda", reading: "Persson, Rothstein & Teorell (2013)", detail: "Interviews with more than 60 respondents, from anticorruption officials to NGO staff and journalists: corruption is seen as what everyone else does."}
+    - {name: "Primary education in Himachal Pradesh vs Uttarakhand", reading: "Mangla (2015)", detail: "Over 500 interviews and focus groups. Himachal outperforms: teacher absence 21.2% vs 32.8%; fifth-graders reading a basic paragraph 89.4% vs 75.8% (ASER 2011)."}
+    - {name: "Police killings in five South American cities", reading: "Brinks (2006)", detail: "São Paulo, Salvador da Bahia, Buenos Aires, Córdoba and Montevideo. São Paulo police killed more than 1,400 people in 1992; conviction rates for accused officers are about 7% in São Paulo, under 5% in Salvador and under 20% in Buenos Aires. Brinks finds an informal rule permitting killings of marginal people in Salvador, of especially violent criminals in Buenos Aires and São Paulo, and none in Córdoba or Uruguay."}
+  readings:
+    - {author: "Gretchen Helmke & Steven Levitsky", year: 2004, title: "Informal Institutions and Comparative Politics: A Research Agenda", pages: "Perspectives on Politics 2(4): 725–740", one_line: "A definition and a four-way typology for bringing unwritten rules into institutional analysis."}
+    - {author: "Daniel M. Brinks", year: 2006, title: "The Rule of (Non)Law: Prosecuting Police Killings in Brazil and Argentina", pages: "Ch. 10 in Helmke & Levitsky (eds.), Informal Institutions and Democracy, pp. 201–226", one_line: "Police impunity follows informal rules about who may be killed, enforced even against prosecutors and judges who try to apply the law."}
+    - {author: "Anna Persson, Bo Rothstein & Jan Teorell", year: 2013, title: "Why Anticorruption Reforms Fail: Systemic Corruption as a Collective Action Problem", pages: "Governance 26(3): 449–471", one_line: "Reforms assume principled principals who do not exist where corruption is the expected behaviour."}
+    - {author: "Akshay Mangla", year: 2015, title: "Bureaucratic Norms and State Capacity in India: Implementing Primary Education in the Himalayan Region", pages: "Asian Survey 55(5): 882–908", one_line: "Deliberative bureaucratic norms explain why Himachal Pradesh delivers primary education better than Uttarakhand."}
+quiz:
+  - {type: mc, q: "In Helmke and Levitsky's typology, an informal institution that coexists with ineffective formal rules and produces outcomes compatible with them is…", options: ["Complementary", "Accommodating", "Competing", "Substitutive"], answer: 3, why: "Substitutive institutions achieve what the formal rules were meant to but failed to, e.g. Peru's rondas campesinas."}
+  - {type: mc, q: "Chile's Concertación power-sharing under the 1980 Constitution is Helmke and Levitsky's example of…", options: ["A competing institution", "An accommodating institution", "A substitutive institution", "A weak institution"], answer: 1, why: "It changed the effects of strong presidential rules without violating them: against the spirit, not the letter."}
+  - {type: mc, q: "Why, according to Persson, Rothstein and Teorell, do principal-agent reforms fail in systemically corrupt countries?", options: ["Agents lack information", "Sanctions are too small", "There are no principled principals willing to enforce, because everyone expects others to be corrupt", "Donors withdraw funding"], answer: 2, why: "Corruption is a collective action problem: enforcing honesty is itself a second-order collective action problem."}
+  - {type: mc, q: "What distinguishes Himachal Pradesh's bureaucracy in Mangla's account?", options: ["More money per pupil", "Deliberative norms: officials adapt policy locally and engage civic groups", "A different national education law", "Stricter rule-following"], answer: 1, why: "Both states share national policy and formal structures; Uttarakhand's legalistic norms do worse."}
+  - {type: short, q: "Is systemic corruption an informal institution in Helmke and Levitsky's sense? Argue one way.", model: "Yes if corruption follows shared rules with sanctions for those who break them (Italy's norms 'more powerful than the laws of the state'); then it is a competing informal institution. No if it is only a widespread behaviour pattern driven by expectations, with no rule enforced outside official channels; Persson et al.'s coordination framing sits between the two."}
+  - {type: short, q: "How do Mangla and Persson et al. disagree on what informality does to state capacity?", model: "For Persson et al., unwritten expectations sustain corruption and defeat formal reform. For Mangla, unwritten bureaucratic norms can build capacity, making the same formal policy work better. Informality is not inherently weakening; it depends on what the shared norms prescribe."}
