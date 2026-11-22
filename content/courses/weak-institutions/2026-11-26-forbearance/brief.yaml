@@ -1,0 +1,53 @@
+course_arc:
+  - {week: 1, date: "2026-10-27", topic: "Recognizing Institutions", now: false}
+  - {week: 2, date: "2026-10-29", topic: "The Strength of Institutions", now: false}
+  - {week: 3, date: "2026-11-03", topic: "Institutional Weakness and Democracy", now: false}
+  - {week: 4, date: "2026-11-05", topic: "Institutional Weakness and Development", now: false}
+  - {week: 5, date: "2026-11-10", topic: "State Capacity", now: false}
+  - {week: 6, date: "2026-11-12", topic: "Society's Role in Building State Capacity", now: false}
+  - {week: 7, date: "2026-11-17", topic: "Delegation, Discretion, Ambiguity and Agency", now: false}
+  - {week: 8, date: "2026-11-19", topic: "Non-Compliance", now: false}
+  - {week: 9, date: "2026-11-24", topic: "Informal Institutions", now: false}
+  - {week: 10, date: "2026-11-26", topic: "Forbearance", now: true}
+  - {week: 11, date: "2026-12-01", topic: "Institutional Ambition", now: false}
+  - {week: 12, date: "2026-12-03", topic: "Institutional Stability and Fragility", now: false}
+  - {week: 13, date: "2026-12-08", topic: "Exogenous Institutional Strengthening", now: false}
+  - {week: 14, date: "2026-12-10", topic: "Endogenous Institutional Strengthening", now: false}
+  - {week: 15, date: "2026-12-15", topic: "In-class exam", now: false}
+context: "Tuesday's class looked at unwritten rules that fill the gaps left by weak formal ones. Today the gap is chosen: the state could enforce the law but decides not to. It builds on non-compliance (19 Nov) and Amengual and Dargent's social determinants of enforcement (12 Nov), and sets up institutional ambition (1 Dec) and stability and fragility (3 Dec)."
+brief:
+  key_questions:
+    - "When the law goes unenforced, is the state unable or unwilling?"
+    - "Who gains from forbearance, and why would politicians choose it?"
+    - "Can enforcement itself be used selectively for electoral gain?"
+    - "Is restraint in using legal powers a strength of democracy or a source of weak institutions?"
+  key_concepts:
+    - {term: "Forbearance", def: "The intentional and revocable nonenforcement of law.", who: "Holland (2016)"}
+    - {term: "Capacity, intention, revocability", def: "Holland's three conditions: the state could plausibly enforce, politicians choose not to, and enforcement can resume (unlike an amnesty).", who: "Holland (2016)"}
+    - {term: "Welfarist forbearance", def: "Tolerating violations by the poor as a class (street vending, squatting) as informal welfare that wins votes where social policy is thin.", who: "Holland (2016)"}
+    - {term: "Selective enforcement", def: "Concentrating enforcement where it pays electorally: the right targets labour inspections at competitive districts and steps them up before presidential elections.", who: "Gainza, Espejo & Livert (2025)"}
+    - {term: "Supranational forbearance", def: "Deliberate underenforcement by an international enforcer, here the European Commission as guardian of the Treaties.", who: "Kelemen & Pavone (2023)"}
+    - {term: "Institutional forbearance", def: "Politicians' restraint in using legal prerogatives to the hilt: avoiding acts that respect the letter of the law but violate its spirit.", who: "Levitsky & Ziblatt (2018)"}
+    - {term: "Constitutional hardball", def: "Playing by the rules while pushing their bounds to defeat rivals for good; the opposite of institutional forbearance.", who: "Tushnet, via Levitsky & Ziblatt (2018)"}
+  takeaways:
+    - "Non-enforcement is not always weakness: with capacity in place, it can be a political choice that can be reversed."
+    - "Forbearance is distributive politics: it gives the poor informal benefits and gives politicians votes."
+    - "The same logic scales up: the European Commission traded enforcement for governments' support for its policy agenda."
+    - "Holland's forbearance (toward citizens who break the law) and Levitsky and Ziblatt's (elite restraint in using legal power) share a word, not a concept: keep them apart."
+  cases:
+    - {name: "Street vending in Santiago; squatting in Bogotá and Lima", reading: "Holland (2016)", detail: "Original data on police operations: poor-district mayors in Santiago keep a strong police force from acting against vendors; in Bogotá and Lima, enforcement against squatters stops when politicians intervene."}
+    - {name: "Labour inspections in Chile", reading: "Gainza, Espejo & Livert (2025)", detail: "Panel data for all 345 Chilean municipalities, 2005–19, on Labor Directorate inspections, with fixed-effects and event-study estimates: the left does not forbear; the right concentrates inspections in competitive districts and speeds them up as presidential elections approach."}
+    - {name: "The European Commission after 2004", reading: "Kelemen & Pavone (2023)", detail: "From 2004 to 2018 infringements opened fell 67% and referrals to the Court of Justice 87%. Under Barroso, political leadership reined in enforcement staff and moved to dialogue (EU Pilot, 2007); the Juncker Commission found a rollback hard. Based on about two dozen elite interviews."}
+    - {name: "US and Chilean democracy", reading: "Levitsky & Ziblatt (2018)", detail: "Chile's culture of compromise before the 1973 coup; Roosevelt's 1937 court-packing plan; the Senate refusing to consider Merrick Garland in 2016."}
+  readings:
+    - {author: "Alisha C. Holland", year: 2016, title: "Forbearance", pages: "American Political Science Review 110(2): 232–246", one_line: "Politicians often choose not to enforce laws the poor break, to win votes where welfare states fall short."}
+    - {author: "Xabier Gainza, Andrés Espejo & Felipe Livert", year: 2025, title: "The Right and the Politics of Labor Informality Enforcement", pages: "Latin American Politics and Society 67: 60–77", one_line: "In Chile, the right enforces labour rules selectively for electoral gain, while the left does not forbear."}
+    - {author: "R. Daniel Kelemen & Tommaso Pavone", year: 2023, title: "Where Have the Guardians Gone? Law Enforcement and the Politics of Supranational Forbearance in the European Union", pages: "World Politics 75(4): 779–825", one_line: "The Commission sacrificed its role as guardian of the Treaties to protect its role as engine of integration."}
+    - {author: "Steven Levitsky & Daniel Ziblatt", year: 2018, title: "How Democracies Die, ch. 5 'The Guardrails of Democracy' and ch. 6 'The Unwritten Rules of American Politics'", pages: "Crown", one_line: "Mutual toleration and institutional forbearance are the unwritten guardrails that keep constitutional powers from being used to the hilt."}
+quiz:
+  - {type: mc, q: "Which is NOT one of Holland's three conditions for forbearance?", options: ["Capacity to enforce", "Intention not to enforce", "Revocability", "A formal amnesty law"], answer: 3, why: "An amnesty surrenders the right to enforce; forbearance keeps it, which is what makes it revocable."}
+  - {type: mc, q: "What do Gainza, Espejo and Livert find about labour inspections in Chile?", options: ["The left forbears most", "Both sides enforce evenly", "The left does not forbear, while the right enforces selectively in competitive districts and before elections", "Inspections fall before every election"], answer: 2, why: "The right faces an electoral dilemma between informal-sector supporters and businesses facing unfair competition."}
+  - {type: mc, q: "Why, according to Kelemen and Pavone, did the European Commission cut infringements after 2004?", options: ["Member states complied better", "Its budget was cut", "Its leadership feared enforcement was costing governments' support for its policy agenda", "The Court of Justice told it to"], answer: 2, why: "The Commission traded its guardian role for its engine-of-integration role."}
+  - {type: mc, q: "In Levitsky and Ziblatt, institutional forbearance means…", options: ["Not enforcing laws against the poor", "Avoiding actions that respect the letter of the law but violate its spirit", "Delegating power to courts", "Accepting election results"], answer: 1, why: "Accepting rivals as legitimate is mutual toleration, the other guardrail."}
+  - {type: short, q: "How do Holland's and Levitsky and Ziblatt's uses of 'forbearance' differ, and is there a common thread?", model: "Holland's forbearance is the state choosing not to sanction citizens who break the law, usually the poor, for electoral gain. Levitsky and Ziblatt's is elites choosing not to use legal powers to the hilt against rivals. The common thread is discretion: in both, actors with the power to act hold back. But Holland's version can weaken the rule of law, while Levitsky and Ziblatt's protects democracy."}
+  - {type: short, q: "Using Kelemen and Pavone, explain why forbearance can be a sign of strategy rather than weakness.", model: "The Commission had the capacity and legal powers to launch infringements but chose dialogue instead, because enforcement was costing it governments' support for its legislative agenda. Lower enforcement reflected a political trade-off, not a lack of capacity, which fits Holland's distinction between unable and unwilling."}
