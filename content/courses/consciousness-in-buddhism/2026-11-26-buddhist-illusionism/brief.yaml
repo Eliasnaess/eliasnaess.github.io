@@ -1,0 +1,50 @@
+course_arc:
+  - {week: 1, date: "2026-09-10", topic: "Buddhist Philosophy of Consciousness in its Historical Context", now: false}
+  - {week: 2, date: "2026-09-17", topic: "Consciousness as Dharma: Abhidharma Taxonomy in the Kośa", now: false}
+  - {week: 3, date: "2026-09-24", topic: "Sarvāstivāda Epistemology: Does the Eye See?", now: false}
+  - {week: 4, date: "2026-10-01", topic: "Sarvāstivāda Metaphysics: Temporality", now: false}
+  - {week: 5, date: "2026-10-08", topic: "The Yogācāra Refutation of Early Buddhist Realism", now: false}
+  - {week: 6, date: "2026-10-15", topic: "Early Chinese Yogācāra I: Paramārtha's Philosophy of Mind", now: false}
+  - {week: 7, date: "2026-10-29", topic: "Early Chinese Yogācāra II: Consciousness and Tathāgatagarbha", now: false}
+  - {week: 8, date: "2026-11-05", topic: "Later Chinese Yogācāra I: Redefining Consciousness", now: false}
+  - {week: 9, date: "2026-11-12", topic: "Later Chinese Yogācāra II: Intentional Structure of Consciousness", now: false}
+  - {week: 10, date: "2026-11-19", topic: "Reframing the Idealism Debate I: A Shared World", now: false}
+  - {week: 11, date: "2026-11-26", topic: "Reframing the Idealism Debate II: Buddhist Illusionism", now: true}
+  - {week: 12, date: "2026-12-03", topic: "Yogācāra in Modernity: Humanistic Buddhism", now: false}
+  - {week: 13, date: "2026-12-10", topic: "Yogācāra in Modernity: Gendering Buddhist Modernism", now: false}
+context: "Week 10 asked how beings can share a world if all is consciousness only. This week asks the follow-up: in what sense is the world we experience an illusion? Xuanzang supplies the scholastic tool, the three natures. Garfield and Huebner, Aviv and Kachru (Kachru again, after last week's 'As if a Stage') bring it into today's debate on illusionism about consciousness. The modernity weeks then ask what this view of mind means for ethics, society and gender."
+brief:
+  key_questions:
+    - "Which parts of experience are illusory on the three-nature model, and which are not?"
+    - "Is our knowledge of our own minds immediate, or is the feeling of immediacy itself an illusion?"
+    - "How does Yogācāra illusionism differ from contemporary illusionism (Frankish, Dennett) about phenomenal consciousness?"
+    - "If illusions come from the stances we take, can practice change what we experience, and the world we share?"
+  key_concepts:
+    - {term: "Imagined nature (parikalpita)", def: "Self and dharmas, including grasper and grasped, as they are falsely imagined; absolutely nonexistent.", who: "Xuanzang, pp. 281–284"}
+    - {term: "Dependent nature (paratantra)", def: "Mind and mental activities arising from conditions and seeds; real, but like a magical illusion.", who: "Xuanzang, pp. 281, 283–287"}
+    - {term: "Perfected nature (pariniṣpanna)", def: "The dependent nature's permanent emptiness of the imagined; neither the same as nor different from the dependent.", who: "Xuanzang, pp. 281, 285–293"}
+    - {term: "Three kinds of naturelessness", def: "The three natures read as the absence of nature; the Buddha taught 'all dharmas are natureless' with a hidden intention, not as nihilism.", who: "Xuanzang, pp. 294–296"}
+    - {term: "Illusion of immediacy", def: "The conviction that we know our own mental states directly and as they are; a form of Sellars's Myth of the Given.", who: "Garfield, pp. 246–250"}
+    - {term: "Subject-object duality", def: "The felt sense of being a unified subject standing over against a world of objects; for Garfield a second, subtler cognitive illusion.", who: "Garfield, pp. 246–248"}
+    - {term: "Illusionism (contemporary)", def: "The view that phenomenal qualities are illusory, produced when introspective mechanisms present the outputs of many processes as simple and unified.", who: "Huebner, Aviv & Kachru on Frankish and Dennett, pp. 223, 225–226"}
+  takeaways:
+    - "'Illusory' does not mean 'nonexistent' across the board: for Xuanzang the imagined does not exist, while the dependent exists the way a magician's illusion does."
+    - "Garfield extends the Buddhist diagnosis inward: even first-person access to experience is mediated, so the feeling of immediacy is itself an illusion."
+    - "Huebner, Aviv and Kachru treat illusions as products of stances and attention, which practice can reshape, rather than outputs of fixed mechanisms."
+    - "The step from Week 10 to Week 11: if worlds are constructed through shared stances, then changing the stance changes what is shared."
+  cases:
+    - {name: "The street magician's rope and snake", reading: "Huebner, Aviv & Kachru, pp. 224–225", detail: "A magician wraps a rope in a cloth and a snake slithers out; the audience can enjoy the illusion or ask how it is made."}
+    - {name: "Mirage", reading: "Garfield, p. 247", detail: "To stop walking toward a mirage you first have to know it is one, then learn what causes it."}
+    - {name: "Painted rice cakes", reading: "Garfield (Dōgen's Gabyō)", detail: "Dōgen turns the saying 'painted rice cakes don't satisfy hunger' around: all our representations are painted rice cakes."}
+    - {name: "The attractive person", reading: "Huebner, Aviv & Kachru, p. 229", detail: "Candrakīrti: through meditation yogins see the same person as impure and impermanent, so what appears depends on a way of life."}
+  readings:
+    - {author: "Xuanzang", year: 1999, title: "The Three Natures (Demonstration of Consciousness Only, ch. X)", pages: "281–296", one_line: "Reads Vasubandhu's verses on the imagined, dependent and perfected natures, reports the Sthiramati and Dharmapāla interpretations, and explains naturelessness."}
+    - {author: "Garfield, Jay L.", year: 2022, title: "Cognitive Illusion and Immediate Experience", pages: "245–265", one_line: "Argues, from Candrakīrti, Yogācāra, Śāntarakṣita and Dōgen, that the immediacy of self-knowledge and subject-object duality are cognitive illusions."}
+    - {author: "Huebner, Aviv & Kachru", year: 2022, title: "The Magic of Consciousness: Sculpting an Alternative Illusionism", pages: "223–244", one_line: "Contrasts contemporary illusionism with three Buddhist templates (quietism, standpoints, re-description) and a Yogācāra account of stances and practice."}
+quiz:
+  - {type: mc, q: "On Xuanzang's account, which nature is absolutely nonexistent?", options: ["The imagined nature", "The dependent nature", "The perfected nature", "None: all three exist conventionally"], answer: 0, why: "What is imagined as self and dharmas, grasper and grasped, does not exist; the dependent exists like an illusion (pp. 281–284)."}
+  - {type: mc, q: "Whose view does Xuanzang follow on which consciousnesses imagine?", options: ["Sthiramati: all eight", "Dharmapāla: only the sixth and seventh", "Vasubandhu: only the store consciousness", "Kuiji: only the five sense consciousnesses"], answer: 1, why: "He reports Sthiramati's view, then concludes that only the sixth and seventh have imagination (Dharmapāla) (pp. 282–283)."}
+  - {type: mc, q: "What does Garfield call the first of the two overarching cognitive illusions?", options: ["The illusion of permanence", "The illusion that we know our inner states immediately and as they are", "The illusion that there is an external world", "The illusion that the store consciousness is a self"], answer: 1, why: "He links it to Sellars's Myth of the Given; the second illusion is subject-object duality (pp. 246–248)."}
+  - {type: mc, q: "According to Huebner, Aviv and Kachru, how does Yogācāra illusionism differ from contemporary illusionism?", options: ["It treats only phenomenal qualities as illusory", "It explains illusions by neural computation", "It treats a wider range of contents as illusory and traces them to stances that practice can change", "It denies that anything appears at all"], answer: 2, why: "Their introduction sets out exactly these three contrasts (p. 223)."}
+  - {type: short, q: "Why, on the three-nature model, is calling the world 'illusory' not the same as calling it nonexistent?", model: "Only the imagined nature is nonexistent. The dependent nature, the causal flow of mind, really arises from conditions but appears in a misleading way, like a magician's illusion. The perfected nature is that dependent flow seen without the imagined overlay."}
+  - {type: short, q: "Garfield thinks the Buddhist tradition gets self-knowledge 'roughly right'. What claim about introspection does this commit him to?", model: "That introspection is a mediated, perception-like faculty working through concepts and language. So the felt immediacy of our access to our own minds is an illusion, not evidence that experience is simply given."}
