@@ -1,0 +1,68 @@
+course_arc:
+  - {week: 1, date: "2026-10-26", topic: "Research questions, concepts, and causal inference", now: false}
+  - {week: 2, date: "2026-11-02", topic: "Cross-case methods: case selection and comparison", now: false}
+  - {week: 3, date: "2026-11-09", topic: "Within-case methods: process tracing", now: false}
+  - {week: 4, date: "2026-11-16", topic: "Ethics of field research; ethnographic research", now: false}
+  - {week: 5, date: "2026-11-23", topic: "Interviewing", now: true}
+  - {week: 6, date: "2026-11-30", topic: "Archival research", now: false}
+  - {week: 7, date: "2026-12-07", topic: "Content and discourse analysis", now: false}
+  - {week: 8, date: "2026-12-16", topic: "Final exam", now: false}
+context: "Last week set the ethical ground rules for fieldwork and made the case for ethnography. This week zooms in on the interview, the workhorse of qualitative data collection, from three angles: experts who know how decisions were made (von Soest), ordinary people making sense of politics (Cramer), and people whose circumstances make them vulnerable (Pearlman). Vandeleene's study of Belgian party selectors is the in-class exercise. Expert interviews feed the process tracing of week 3, and weeks 4–6 are the material for the written paper due 4 December."
+brief:
+  key_questions:
+    - "Who counts as an expert, and why should the answer turn on knowledge rather than status?"
+    - "How can interview evidence be made reliable when every respondent is biased, forgetful or performing?"
+    - "What do we learn by listening to people talk in their own groups that surveys and one-on-one interviews miss?"
+    - "When is it right to interview vulnerable people at all, and what does consent mean when the power gap is wide?"
+  key_concepts:
+    - {term: "Expert (knowledge-based)", def: "Anyone with specialized knowledge of, or involvement in, the process of interest. Selection should be problem- and expertise-centred, not status-oriented: an elite who does not know the process is not an expert.", who: "von Soest (2023), after Dexter"}
+    - {term: "Inside vs outside experts", def: "Inside experts (actors) shaped the process and are primary sources; outside experts (analysts) study it and are secondary sources with the 'big picture'. Select both, and include mid- and low-level insiders.", who: "von Soest (2023), Table 1"}
+    - {term: "Assessment, aggregation, anticipation, affirmation", def: "The four applications of expert interviews. Assessment, reconstructing events, is the most relevant and often gives process tracing its empirical basis; affirmation has a 'dark side' when experts are invoked selectively.", who: "von Soest (2023)"}
+    - {term: "Reactivity and subjectivity", def: "The two core personal biases. Reactivity: the interview is relational and the interviewer's identity and questions shape answers. Subjectivity: purposeful or unintentional misrepresentation, subjective interpretation, lacking memory (the Rashomon effect).", who: "von Soest (2023), Table 2"}
+    - {term: "Internal triangulation and inter-expert agreement", def: "Cross-checking interviews against each other (inside vs outside, leadership vs operational level) and reporting how far experts agree, so that quotes are situated in the whole corpus rather than cherry-picked.", who: "von Soest (2023)"}
+    - {term: "Analytic listening", def: "Listening to how people talk about public affairs, ideally in the venues they normally inhabit and with the people they normally spend time with, and comparing across such settings to find patterns in their understandings.", who: "Cramer (2024), ch. 17"}
+    - {term: "Vulnerable populations", def: "Participants whose characteristics or circumstances diminish their autonomy and make them susceptible to coercion or exploitation. The label is contested, so researchers can ask how the research itself creates or reduces vulnerability.", who: "Pearlman (2024), ch. 18"}
+    - {term: "Dialogic, ongoing consent", def: "Consent as a continuing responsibility rather than a one-off form: state risks and benefits, acknowledge privilege, and invite participants to question and challenge the researcher.", who: "Pearlman (2024), citing Lake, Majic & Maxwell"}
+  takeaways:
+    - "von Soest: expert interviews are a key tool for tracing causal mechanisms, but only if experts are selected purposefully, their biases are actively handled, and evidence is captured systematically. The evidentiary value of a single expert interview is 'close to zero'."
+    - "Cramer: listening methods suit understanding how particular people interpret their world, not generalizing with known probabilities. Rigor comes from good questions, recordings, prompt field notes and presenting typical excerpts and exceptions with their context."
+    - "Pearlman: research must at minimum not increase people's vulnerability. Consent, rapport and logistics all need rethinking under power asymmetry, and two questions stay open: interviewees who threaten us or whom we find loathsome, and the researcher's own vulnerability."
+    - "Vandeleene shows elite interviewing at work: a broad opening question plus standardized vignettes make 23 selectors comparable and reveal that no selection criterion is self-sufficient."
+  cases:
+    - {name: "Political interference in African tax administrations", reading: "von Soest (2023)", detail: "Over 150 semi-structured interviews; operational tax officers contrasted with agency leadership revealed firms owned by politicians that were never audited ('don't go to this man, this man is difficult')."}
+    - {name: "Five-minute survey experiment at NATO", reading: "von Soest (2023), citing Hardt", detail: "Each interview began with a paper-and-pen experiment, combining standardized methods with expert interviews to curb social-desirability bias."}
+    - {name: "Rural resentment in Wisconsin", reading: "Cramer (2024)", detail: "Listening to informal groups suggested resentment of cities among smaller and rural communities; she then went back to more rural places to test and deepen the finding."}
+    - {name: "Consent in a refugee camp", reading: "Pearlman (2024), citing Bartolomei", detail: "People desperate for any help would 'agree to anything', which makes asking permission 'a farce' unless consent is made dialogic."}
+    - {name: "Belgian party selectors", reading: "Vandeleene (2024)", detail: "23 selectors from PS, Ecolo and MR; competence weighs less than partisanship and popularity, criteria intertwine, and loyalty is a prerequisite for safe list positions."}
+  readings:
+    - {author: "von Soest", year: 2023, title: "Why Do We Speak to Experts? Reviving the Strength of the Expert Interview Method", pages: "277–287", one_line: "A knowledge-based notion of experts, inside and outside experts in one framework, and concrete fixes for selection, bias and capturing evidence."}
+    - {author: "Cramer", year: 2024, title: "Interviewing and Listening to Ordinary People (Cyr & Goodman ch. 17)", pages: "195–207", one_line: "Analytic listening: join groups that already meet, sample for sense-making, record everything, and present patterns with their exceptions and context."}
+    - {author: "Pearlman", year: 2024, title: "Interviewing Vulnerable Populations (Cyr & Goodman ch. 18)", pages: "208–221", one_line: "A contested concept and its practice: initial steps, recruitment, logistics, consent, conducting interviews, trauma, and two open problems."}
+    - {author: "Vandeleene", year: 2024, title: "The why of candidate selection: How party selectors handle trade-offs between party goals", pages: "73–84", one_line: "In-class exercise: 23 selector interviews with vignettes on the trade-offs between partisanship, popularity and competence."}
+quiz:
+  - type: mc
+    q: "For von Soest (2023), a cabinet minister who knows little about the decision you are studying is:"
+    options: ["An elite but not an expert, so not a suitable interviewee", "An outside expert", "An inside expert because of their status", "A suitable source for affirmation"]
+    answer: 0
+    why: "He defines experts by knowledge, not status. Elites who are not knowledgeable about the process do not qualify as experts, and researchers should desist from selecting them."
+  - type: mc
+    q: "Which application of expert interviews does von Soest call the most relevant, and the one that often provides the empirical basis for process tracing?"
+    options: ["Assessment", "Aggregation", "Anticipation", "Affirmation"]
+    answer: 0
+    why: "Assessment means experts reconstruct an event or set of events analytically, which is exactly what process tracing needs."
+  - type: mc
+    q: "Cramer's 'analytic listening' differs from a focus group because:"
+    options: ["The researcher joins groups that already meet, on their turf and for their own purposes", "It always uses a probability sample", "It avoids recording to keep conversations natural", "It is limited to one-on-one interviews"]
+    answer: 0
+    why: "Focus groups are convened by the researcher for the researcher's goals. Cramer asks permission to join groups that already gather, which changes the power, the agenda and the connections between participants."
+  - type: mc
+    q: "Vandeleene presented selectors with ten one-line vignettes near the end of each interview. Why?"
+    options: ["To make respondents comparable and move them from personal to more abstract issues", "To replace the interviews with a survey", "To test hypotheses statistically", "To check selectors' memory of past lists"]
+    answer: 0
+    why: "The vignettes ensured that even respondents who had not raised a criterion discussed it, and broadened the focus from personal to abstract issues."
+  - type: short
+    q: "Name von Soest's three recurring problems with expert interviews and one remedy for each."
+    model: "1) Selection of experts: choose purposefully, combining inside and outside experts and including mid- and low-level insiders. 2) Personal biases: handle reactivity (reflect on positionality, use probes and reworded follow-ups, read nonverbal meta-data) and subjectivity (assess motives to distort beforehand, cross-check; combine with list experiments). 3) Capturing evidence: avoid the 'power of the good quote' by reporting inter-expert agreement and triangulating externally (other data) and internally (between expert groups)."
+  - type: short
+    q: "Audit Vandeleene (2024) with von Soest: what does her design do well, and what would von Soest add?"
+    model: "Well: purposeful selection of selectors involved in recent selections across three parties, provinces, ages and genders; a semi-structured format with a broad opener and standardized vignettes for comparability; systematic coding in NVivo. Von Soest would ask her to treat selectors as inside experts prone to self-presentation, add outside experts (analysts) or documents for triangulation, report inter-expert agreement behind quotes, and reflect on how online (PS, MR) versus face-to-face (Ecolo) interviews may have shaped answers."

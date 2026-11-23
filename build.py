@@ -426,7 +426,9 @@ for s in seminars:
     for i in media["images"]:
         n_img = len(media["images"]); idx = media["images"].index(i) + 1
         cap = os.path.splitext(i)[0].replace("-", " ").capitalize() if not i.startswith("infographic") else ("Infographic" + (f" {idx} of {n_img}" if n_img > 1 else ""))
-        blocks.append(f'<figure class="media img"><a href="{i}" target="_blank" rel="noopener"><img src="{i}" alt="{E(s["title"])} — {E(cap)}" loading="lazy"></a><figcaption>{E(cap)} · tap to open full size</figcaption></figure>')
+        note = (s.get("image_notes") or {}).get(os.path.splitext(i)[0])
+        note_html = f'<p class="hint"><strong>Note:</strong> {E(note)}</p>' if note else ""
+        blocks.append(f'<figure class="media img"><a href="{i}" target="_blank" rel="noopener"><img src="{i}" alt="{E(s["title"])} — {E(cap)}" loading="lazy"></a><figcaption>{E(cap)} · tap to open full size</figcaption>{note_html}</figure>')
     docs = "".join(f'<section class="prose notes">{render_md(open(os.path.join(s["dir"], d), encoding="utf-8").read())}</section>' for d in s["docs"])
     pdfs = "".join(f'<li><a href="{f}">{E(os.path.splitext(f)[0].replace("-", " ").title())} (PDF)</a></li>' for f in media["pdfs"])
     extra = []
