@@ -5,7 +5,7 @@ week: 11
 labels:
   deep-dive-long: "The three natures of Buddhist illusionism · long"
   deep-dive-standard: "Buddhist illusionism in Yogācāra philosophy · standard"
-r2_audio_pending:
+r2_audio:
   deep-dive-long.mp3: 25
   deep-dive-standard.mp3: 24
 summary: "If experience is an illusion, what kind of illusion is it, and who is it an illusion for? Xuanzang's three natures, Garfield's case against the immediacy of self-knowledge, and Huebner, Aviv and Kachru's magic show set Yogācāra illusionism against today's illusionists."

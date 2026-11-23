@@ -6,7 +6,7 @@ summary: When formal rules are weak, unwritten ones often decide what happens. H
 labels:
   deep-dive-long: "How unwritten rules govern weak states · long"
   deep-dive-standard: "Why unwritten rules beat written laws · standard"
-r2_audio_pending:
+r2_audio:
   deep-dive-long.mp3: 57
   deep-dive-standard.mp3: 24
 image_notes:
