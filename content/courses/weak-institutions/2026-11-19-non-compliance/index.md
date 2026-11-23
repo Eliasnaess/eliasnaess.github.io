@@ -6,6 +6,7 @@ labels:
   deep-dive-long: "Why citizens break rules to communicate · long"
 r2_audio:
   deep-dive-long.mp3: 52
+  deep-dive-standard.mp3: 20
 summary: Why do people obey the state, and what does it mean when they don't? Levi and Sacks tie willing compliance to effective and fair government, Tsai shows Chinese villagers breaking rules to tell officials a policy is wrong, and Velasco-Guachalla and colleagues show Bolivia's COVID-19 rules splitting along lines of contested legitimacy.
 ---
 **Readings**
