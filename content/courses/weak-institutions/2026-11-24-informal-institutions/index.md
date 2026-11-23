@@ -6,9 +6,13 @@ summary: When formal rules are weak, unwritten ones often decide what happens. H
 labels:
   deep-dive-long: "How unwritten rules govern weak states · long"
   deep-dive-standard: "Why unwritten rules beat written laws · standard"
-r2_audio:
+r2_audio_pending:
   deep-dive-long.mp3: 57
   deep-dive-standard.mp3: 24
+image_notes:
+  infographic-1: "Made before the Brinks chapter was added, so it covers Helmke and Levitsky, Persson et al. and Mangla only."
+  infographic-2: "Made before Brinks was added. 'Divergant' should read 'Divergent', and the Persson et al. line is loosely worded: their point is that reforms assume 'principled principals' who are missing where corruption is the norm."
+  infographic-3: "Made before Brinks was added. It repeats 'seen in', and Persson et al.'s interviews were in Kenya and Uganda."
 ---
 **Readings**
 

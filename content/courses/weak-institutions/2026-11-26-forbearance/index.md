@@ -6,9 +6,11 @@ summary: Sometimes the law goes unenforced because the state chooses not to enfo
 labels:
   deep-dive-long: "Why governments intentionally ignore the law · long"
   deep-dive-standard: "Why governments choose not to enforce laws · standard"
-r2_audio:
+r2_audio_pending:
   deep-dive-long.mp3: 57
   deep-dive-standard.mp3: 14
+image_notes:
+  infographic-2: "Typos: 'roplaced', 'inftingements', 'Treety', 'Barrose', 'forbearanee', 'aoross', 'secrificing'. Its EU example puts the 67% drop in infringements on Barroso alone; Kelemen and Pavone's figure covers 2004–2018, which also includes the Juncker Commission."
 ---
 **Readings**
 

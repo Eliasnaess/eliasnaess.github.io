@@ -5,10 +5,12 @@ week: 11
 labels:
   deep-dive-long: "The three natures of Buddhist illusionism · long"
   deep-dive-standard: "Buddhist illusionism in Yogācāra philosophy · standard"
-r2_audio:
+r2_audio_pending:
   deep-dive-long.mp3: 25
   deep-dive-standard.mp3: 24
 summary: "If experience is an illusion, what kind of illusion is it, and who is it an illusion for? Xuanzang's three natures, Garfield's case against the immediacy of self-knowledge, and Huebner, Aviv and Kachru's magic show set Yogācāra illusionism against today's illusionists."
+image_notes:
+  infographic-1: "Typos: 'contest-dependent' (context-dependent), 'kormic', 'micropresents', 'causel', 'deplay'. It gives Huebner, Aviv and Kachru's mechanism as 'root awareness (ālaya-vijñāna)'; in the chapter the mechanism is attention sculpted by stances and practice, and the 'root strategy' is the magician's trick, not the store consciousness."
 ---
 **Readings:**
 - Xuanzang, *Demonstration of Consciousness Only*, "The Three Natures", in *Three Texts on Consciousness Only* (trans. Cook, 1999), pp. 281–296.
