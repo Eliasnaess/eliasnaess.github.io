@@ -3,6 +3,12 @@ title: "Interviewing"
 date: 2026-11-23
 week: 5
 summary: Who should we talk to, and how do we turn conversations into evidence? Von Soest makes the case for expert interviews as a window on causal mechanisms, Cramer shows what listening to ordinary people in their own groups can reveal, Pearlman asks what we owe people whose circumstances make them vulnerable, and Vandeleene's interviews with Belgian party selectors put it all to work.
+labels:
+  deep-dive-long: "How political scientists conduct qualitative interviews · long"
+  deep-dive-standard: "Qualitative interviewing between facts and meaning · standard"
+r2_audio:
+  deep-dive-long.mp3: 64
+  deep-dive-standard.mp3: 23
 image_notes:
   infographic-1: "The lettering in the Vandeleene box 'Aggregated decision-making' is garbled; it means selectors balance candidate profiles across the whole list. 'Trianquiets sourses' should read 'triangulates sources'."
   infographic-3: "Vandeleene's three party goals are unity, policy and victory (not 'efficiency'), and her ten vignettes were one-line statements about a single selection criterion, not full candidate profiles. 'Partiscanship' should read partisanship."
@@ -14,4 +20,4 @@ image_notes:
 - Wendy Pearlman (2024), "Interviewing Vulnerable Populations", in Cyr & Goodman (eds.), ch. 18
 - In-class exercise: Audrey Vandeleene (2024), "The why of candidate selection: How party selectors handle trade-offs between party goals", *Party Politics* 30(1): 73–84
 
-**Where to start:** read *At a glance* for the four readings on one screen, look at the three infographics (a concept map, the four voices in dialogue, and the argument chains), then try the six questions in *Test yourself*.
+**Where to start:** read *At a glance* for the four readings on one screen, look at the three infographics (a concept map, the four voices in dialogue, and the argument chains), then try the six questions in *Test yourself*. Then listen to a podcast: the long one (64 min) covers all four readings in depth, the standard one (23 min) the essentials.
